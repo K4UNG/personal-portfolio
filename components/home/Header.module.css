@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem var(--padding);
+    border-bottom: 1px solid var(--clr-dark-30);
+}
+
+.tags:nth-child(3),
+.tags:last-child {
+    display: none;
+}
+
+.tags {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+}

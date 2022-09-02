@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;700&display=swap');
 
 *,
 *::before,
@@ -18,9 +18,26 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
 :root {
   --clr-light: #ccc;
   --clr-dark: #1e1e1e;
+  --clr-dark-30: rgba(30, 30, 30, 0.3);
+  --clr-dark-50: rgba(30, 30, 30, 0.5);
 
-  --padding: 1rem;
+  --padding: .75rem;
+}
+
+::selection {
+  background-color: var(--clr-dark);
+  color: var(--clr-light)
+}
+
+body {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
 }
