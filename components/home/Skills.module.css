@@ -1,0 +1,37 @@
+.skills {
+    margin-top: 2rem;
+}
+
+.langs {
+    text-align: center;
+}
+
+.lang {
+    display: inline-block;
+    margin: 0 .6rem;
+    font-weight: 700;
+    font-size: 6vw;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.lang.underline {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: calc(100% - (2 * var(--padding)));
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
