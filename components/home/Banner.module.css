@@ -64,4 +64,18 @@
     top: 0;
     mix-blend-mode: difference;
     z-index: 10;
+    border-radius: 15px;
+    transform: scale(0);
+    animation: scaleup 300ms ease forwards;
+    transition: opacity 100ms ease;
+}
+
+.button__overlay.out {
+    opacity: 0;
+}
+
+@keyframes scaleup {
+    to {
+        transform: scale(1);
+    }
 }
