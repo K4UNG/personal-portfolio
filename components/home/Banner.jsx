@@ -6,63 +6,29 @@ import { useDispatch } from "react-redux";
 import { animationActions } from "../../store/animationSlice";
 
 export default function Banner() {
-  // ==== HOVER ANIAMTION ==== 
   const buttonOneRef = useRef();
   const buttonTwoRef = useRef();
   const spanOneRef = useRef();
   const spanTwoRef = useRef();
-  const [buttonOne, setButtonOne] = useState(null);
-  const [buttonTwo, setButtonTwo] = useState(null);
+  const [pos, setPos] = useState(null)
   const dispatch = useDispatch();
 
-  function onMouseEnterOne(e) {
+  function onMouseEnter(e, ref) {
     const { pageX, pageY } = e;
-    const { offsetLeft, offsetTop } = buttonOneRef.current;
-    setButtonOne({
+    const { offsetLeft, offsetTop } = ref.current;
+    setPos({
       x: pageX - offsetLeft + "px",
       y: pageY - offsetTop + "px",
+      ref: ref
     });
     dispatch(animationActions.hideCursor());
+    
   }
 
-  function onMouseEnterTwo(e) {
-    const { pageX, pageY } = e;
-    const { offsetLeft, offsetTop } = buttonTwoRef.current;
-    setButtonTwo({
-      x: pageX - offsetLeft + "px",
-      y: pageY - offsetTop + "px",
-    });
-    dispatch(animationActions.hideCursor());
+  function onMouseLeave(ref) {
+    ref.current?.classList.add(styles.out)
+    dispatch(animationActions.removeState())
   }
-
-  function onMouseLeaveOne() {
-    spanOneRef.current?.classList.add(styles.out);
-    dispatch(animationActions.removeState());
-  }
-
-  function onMouseLeaveTwo() {
-    spanTwoRef.current?.classList.add(styles.out);
-    dispatch(animationActions.removeState());
-  }
-
-  useEffect(() => {
-    const elementOne = buttonOneRef.current;
-    elementOne.addEventListener("mouseenter", onMouseEnterOne);
-    elementOne.addEventListener("mouseleave", onMouseLeaveOne);
-
-    const elementTwo = buttonTwoRef.current;
-    elementTwo.addEventListener("mouseenter", onMouseEnterTwo);
-    elementTwo.addEventListener("mouseleave", onMouseLeaveTwo);
-
-    return () => {
-      elementOne.removeEventListener("mouseenter", onMouseEnterOne);
-      elementTwo.removeEventListener("mouseenter", onMouseEnterTwo);
-      elementOne.removeEventListener("mouseleave", onMouseLeaveOne);
-      elementTwo.removeEventListener("mouseleave", onMouseLeaveTwo);
-    };
-  });
-
-  // ===== HOVER ANIMATION ========
 
   return (
     <section className={styles.banner}>
@@ -104,14 +70,16 @@ export default function Banner() {
               className={styles.button}
               href="#portfolio"
               alt="portfolio section"
+              onMouseEnter={(e) => onMouseEnter(e, buttonOneRef)}
+              onMouseLeave={() => onMouseLeave(spanOneRef)}
               ref={buttonOneRef}
             >
               Go to Projects <ArrowRight />
-              {buttonOne && (
+              {pos && pos.ref === buttonOneRef && (
                 <span
-                  onTransitionEnd={() => setButtonOne(null)}
+                  onTransitionEnd={() => setPos(null)}
                   ref={spanOneRef}
-                  style={{ transformOrigin: buttonOne.x + " " + buttonOne.y }}
+                  style={{ transformOrigin: pos.x + " " + pos.y }}
                   className={styles.button__overlay}
                 />
               )}
@@ -124,13 +92,18 @@ export default function Banner() {
               doloribus debitis ipsum quos molestias odio?
             </p>
             <Link href="/blog" alt="blog">
-              <a className={styles.button} ref={buttonTwoRef}>
+              <a
+                className={styles.button}
+                onMouseEnter={e => onMouseEnter(e, buttonTwoRef)}
+                onMouseLeave={() => onMouseLeave(spanTwoRef)}
+                ref={buttonTwoRef}
+              >
                 Blog <ArrowRight />
-                {buttonTwo && (
+                {pos && pos.ref === buttonTwoRef && (
                   <span
-                    onTransitionEnd={() => setButtonTwo(null)}
+                    onTransitionEnd={() => setPos(null)}
                     ref={spanTwoRef}
-                    style={{ transformOrigin: buttonTwo.x + " " + buttonTwo.y }}
+                    style={{ transformOrigin: pos.x + " " + pos.y }}
                     className={styles.button__overlay}
                   />
                 )}

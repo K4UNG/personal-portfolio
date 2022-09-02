@@ -67,7 +67,7 @@
     border-radius: 15px;
     transform: scale(0);
     animation: scaleup 300ms ease forwards;
-    transition: opacity 100ms ease;
+    transition: opacity 150ms ease;
 }
 
 .button__overlay.out {
