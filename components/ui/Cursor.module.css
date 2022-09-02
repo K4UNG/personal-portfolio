@@ -8,9 +8,20 @@
     mix-blend-mode: difference;
     border-radius: 50%;
     transform-origin: center;
-    transition: transform 100ms ease;
+    transition: transform 100ms ease, width 100ms ease, height 100ms ease;
+    border: 1px solid var(--clr-dark);
+    z-index: 999;
 }
 
 .cursor.hidden {
     transform: translate(-50%, -50%) scale(0);
+}
+
+.cursor.expand {
+    width: 70px;
+    height: 70px;
+    mix-blend-mode: normal;
+    display: grid;
+    place-items: center;
+    text-align: center;
 }

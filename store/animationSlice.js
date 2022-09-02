@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const animationSlice = createSlice({
     name: 'animation',
     initialState: {
-        state: null
+        state: null,
+        number: '01'
     },
     reducers: {
         removeState(state) {
@@ -14,6 +15,10 @@ const animationSlice = createSlice({
         },
         addMin(state, payload) {
             state.state = payload
+        },
+        project(state, payload) {
+            state.state = 'Enter'
+            state.number = payload.payload
         }
     }
 })
