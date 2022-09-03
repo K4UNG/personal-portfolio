@@ -25,4 +25,12 @@
     display: grid;
     place-items: center;
     text-align: center;
+    border: 0;
+}
+
+@media (min-width: 1100px) {
+    .cursor.expand {
+        width: 100px;
+        height: 100px;
+    }
 }

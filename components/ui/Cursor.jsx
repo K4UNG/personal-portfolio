@@ -6,7 +6,6 @@ export default function Cursor() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const state = useSelector((state) => state.state);
-  const number = useSelector((state) => state.number);
 
   function onMouseMove(event) {
     const { clientX: x, clientY: y } = event;
@@ -33,8 +32,6 @@ export default function Cursor() {
         {state === "Enter" && (
           <>
             {state}
-            <br />
-            {number}
           </>
         )}
       </div>

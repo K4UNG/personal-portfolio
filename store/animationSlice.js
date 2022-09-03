@@ -9,6 +9,7 @@ const animationSlice = createSlice({
     reducers: {
         removeState(state) {
             state.state = null
+            state.number = null
         },
         hideCursor(state) {
             state.state = 'hide'
