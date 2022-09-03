@@ -29,6 +29,7 @@ a {
   --clr-dark: #1e1e1e;
   --clr-dark-30: rgba(30, 30, 30, 0.3);
   --clr-dark-50: rgba(30, 30, 30, 0.5);
+  --clr-dark-70: rgba(30, 30, 30, 0.7);
 
   --padding: .75rem;
   --h2: 10vw;

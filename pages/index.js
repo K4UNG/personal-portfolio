@@ -1,8 +1,9 @@
-import Header from "../components/home/Hero/Header"
-import Banner from "../components/home/Hero/Banner"
-import Skills from "../components/home/Portfolio/Skills"
-import Portfolio from "../components/home/Portfolio/Portfolio"
-import About from "../components/home/About/About"
+import Header from "../components/home/Hero/Header";
+import Banner from "../components/home/Hero/Banner";
+import Skills from "../components/home/Portfolio/Skills";
+import Portfolio from "../components/home/Portfolio/Portfolio";
+import About from "../components/home/About/About";
+import Contact from "../components/home/Contact/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
         <Skills />
         <Portfolio />
         <About />
+        <Contact />
       </main>
     </div>
-  )
+  );
 }

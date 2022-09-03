@@ -45,7 +45,7 @@ export default function About() {
             }}
             onMouseLeave={() => {
               dispatch(animationActions.removeState());
-              buttonRef?.current.classList.add(styles.out);
+              buttonRef.current?.classList.add(styles.out);
             }}
           >
             Download CV

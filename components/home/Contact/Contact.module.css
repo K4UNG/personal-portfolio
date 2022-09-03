@@ -1,0 +1,65 @@
+.contact {
+    padding: 1rem var(--padding) 2rem;
+}
+
+.image {
+    display: none;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(--h2);
+}
+
+.control {
+    position: relative;
+}
+
+.control label {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    transition-property: left top bottom font-size;
+    transition: 200ms ease;
+}
+
+.control:last-of-type label {
+    bottom: 10px;
+}
+
+.control input,
+.control textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--clr-dark-70);
+    margin-top: 2rem;
+    padding: 5px;
+}
+
+.control input:focus,
+.control textarea:focus {
+    outline: 0;
+}
+
+.button {
+    font-weight: 500;
+    color: white;
+    background-color: var(--clr-dark);
+    padding: 3px 1rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-top: 1rem;
+    transition: transform 150ms ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.control label.focus {
+    font-size: .8rem;
+    left: .3rem;
+    bottom: calc(100% - 2rem)
+}

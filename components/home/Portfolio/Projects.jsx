@@ -15,6 +15,20 @@ const projects = [
         lang: 'React',
         image: '/images/keyboard.png',
         slug: 'cookingbud'
+    },
+    {
+        number: '03',
+        title: 'Khanner Blog',
+        lang: 'Django',
+        image: '/images/keyboard.png',
+        slug: 'khanner-blog'
+    },
+    {
+        number: '04',
+        title: 'CookingBud',
+        lang: 'React',
+        image: '/images/keyboard.png',
+        slug: 'cookingbud'
     }
 ]
 
