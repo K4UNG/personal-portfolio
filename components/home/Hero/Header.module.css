@@ -16,3 +16,13 @@
     font-weight: 700;
     font-size: .9rem;
 }
+
+@media (min-width: 620px) {
+    .header {
+        padding: 1rem var(--padding) .5rem;
+    }
+
+    .tags:nth-child(3) {
+        display: unset;
+    }
+}

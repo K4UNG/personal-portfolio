@@ -56,6 +56,12 @@ a {
 body {
   background-color: var(--clr-light);
   color: var(--clr-dark);
-  position: relative;
   overflow-x: hidden;
+  position: relative;
+}
+
+@media (min-width: 620px) {
+  :root {
+    --padding: 1rem;
+  }
 }

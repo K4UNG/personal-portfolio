@@ -2,6 +2,7 @@ import styles from "./About.module.css";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
 import { useState, useRef } from "react";
+import ArrowDown from "../../ui/ArrowDown";
 
 export default function About() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export default function About() {
             maiores amet voluptates necessitatibus soluta accusantium!
           </p>
 
-          <button
+          <a
             className={styles.button}
             onMouseEnter={(e) => {
               onMouseEnter(e);
@@ -47,8 +48,11 @@ export default function About() {
               dispatch(animationActions.removeState());
               buttonRef.current?.classList.add(styles.out);
             }}
+            href="/images/keyboard.png"
+            alt='cv downloader'
+            download
           >
-            Download CV
+            Download CV <ArrowDown />
             {pos && (
               <span
                 onTransitionEnd={() => setPos(null)}
@@ -57,7 +61,7 @@ export default function About() {
                 className={styles.button__overlay}
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
     </div>

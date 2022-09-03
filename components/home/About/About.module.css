@@ -33,6 +33,14 @@
     border: 0;
     position: relative;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+}
+
+.button svg {
+    width: 15px;
+    margin-left: 5px;
 }
 
 .button__overlay {
