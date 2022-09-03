@@ -2,6 +2,7 @@ import styles from "./Contact.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
+import Image from 'next/image';
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -27,8 +28,8 @@ export default function Contact() {
 
   return (
     <div className={styles.contact}>
-      <div>
-        {/* <img src="/images/letter.jpg" className={styles.image} /> */}
+      <div className={styles.image}>
+        <Image src="/images/letter.jpg" className={styles.image} height='800' width='700' />
         <h2 className={styles.title}>Get in Touch</h2>
       </div>
       <div className={styles.form}>

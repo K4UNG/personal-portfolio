@@ -66,3 +66,30 @@
 .button__overlay.out {
     opacity: 0;
 }
+
+@media (min-width: 620px) {
+    .image {
+        display: unset;
+    }
+
+    .image span {
+        width: 100% !important;
+        height: 400px !important;
+    }
+
+    .image img {
+        object-fit: cover;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .name {
+        margin: 0;
+    }
+}

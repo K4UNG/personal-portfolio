@@ -6,16 +6,17 @@ import About from "../components/home/About/About";
 import Contact from "../components/home/Contact/Contact";
 
 export default function Home() {
+
   return (
-    <div>
-      <Header />
-      <main>
-        <Banner />
-        <Skills />
-        <Portfolio />
-        <About />
-        <Contact />
-      </main>
-    </div>
+      <div>
+        <Header />
+        <main>
+          <Banner />
+          <Skills />
+          <Portfolio />
+          <About />
+          <Contact />
+        </main>
+      </div>
   );
 }

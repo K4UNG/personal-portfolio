@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
 import { useState, useRef } from "react";
 import ArrowDown from "../../ui/ArrowDown";
+import Image from 'next/image';
 
 export default function About() {
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ export default function About() {
     <div className={styles.about}>
       <h2 className={styles.title}>About</h2>
       <div className={styles.container}>
-        <div className={styles.image}></div>
+        <div className={styles.image}>
+          <Image src='/images/person.jpg' alt='Kaung Zin Hein' width='500' height='900' />
+        </div>
         <div className={styles.content}>
           <h3 className={styles.name}>I'm Kaung Zin Hein</h3>
           <p className={styles.text}>
