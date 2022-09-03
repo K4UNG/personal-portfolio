@@ -33,6 +33,7 @@ a {
 
   --padding: .75rem;
   --h2: 10vw;
+  scroll-behavior: smooth;
 }
 
 ::selection {

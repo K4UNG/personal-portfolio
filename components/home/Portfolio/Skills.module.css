@@ -66,3 +66,13 @@
         font-size: min(5vw, 3.5rem);
     }
 }
+
+@media (min-width: 1100px) {
+    .lang {
+        font-size: min(5vw, 4rem);
+    }
+
+    .langs {
+        margin: 4rem 0 5rem;
+    }
+}
