@@ -9,7 +9,7 @@ export default function Cursor() {
   const number = useSelector((state) => state.number);
 
   function onMouseMove(event) {
-    const { pageX: x, pageY: y } = event;
+    const { clientX: x, clientY: y } = event;
     setX(x);
     setY(y);
   }

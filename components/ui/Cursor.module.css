@@ -1,5 +1,5 @@
 .cursor {
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
     width: 20px;
@@ -11,6 +11,7 @@
     transition: transform 100ms ease, width 100ms ease, height 100ms ease;
     border: 1px solid var(--clr-dark);
     z-index: 999;
+    font-weight: 500;
 }
 
 .cursor.hidden {

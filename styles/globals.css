@@ -65,3 +65,9 @@ body {
     --padding: 1rem;
   }
 }
+
+@media (min-width: 980px) {
+  :root {
+    --padding: 2rem;
+  }
+}

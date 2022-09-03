@@ -48,6 +48,8 @@ export default function Banner() {
               <li>Contact</li>
             </ul>
           </nav>
+        </div>
+      </div>
           <div className={styles.work}>
             Available for work at{" "}
             <a href="mailto:kgzinhein.my@gmail.com" alt="mail link">
@@ -55,10 +57,9 @@ export default function Banner() {
             </a>
             .
           </div>
-        </div>
-      </div>
 
       <div className={styles.banner__bottom}>
+        <p className={styles.strong}>An individual with passion for creative development</p>
         <div className={styles.banner__text}>
           <div className={styles.text__container}>
             <p className={styles.text}>

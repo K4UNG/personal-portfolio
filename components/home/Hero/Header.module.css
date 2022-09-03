@@ -26,3 +26,9 @@
         display: unset;
     }
 }
+
+@media (min-width: 980px) {
+    .tags:last-child {
+        display: unset;
+    }
+}

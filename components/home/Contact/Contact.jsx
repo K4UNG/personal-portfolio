@@ -30,6 +30,7 @@ export default function Contact() {
     <div className={styles.contact}>
       <div className={styles.image}>
         <Image src="/images/letter.jpg" className={styles.image} height='800' width='700' />
+        <div className={styles.overlay} />
         <h2 className={styles.title}>Get in Touch</h2>
       </div>
       <div className={styles.form}>

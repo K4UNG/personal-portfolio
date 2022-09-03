@@ -6,6 +6,10 @@
     display: none !important;
 }
 
+.overlay {
+    display: none;
+}
+
 .title {
     text-transform: uppercase;
     font-weight: 700;
@@ -85,6 +89,7 @@
 
     .image img {
         object-fit: cover !important;
+        filter: saturate(0%);
     }
 
     .title {
@@ -97,6 +102,16 @@
         text-align: center;
         font-weight: 900;
         font-size: min(var(--h2), 6rem);
+    }
+
+    .overlay {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--clr-dark-50);
     }
 
     .form {
