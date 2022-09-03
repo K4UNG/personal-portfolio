@@ -1,29 +1,13 @@
 import styles from "./Portfolio.module.css";
 import Projects from "./Projects";
 import Achievements from "./Achievements";
-import { motion, useScroll } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import useSlideIn from "../../../hooks/use-slideIn";
+import { useRef } from "react";
 
 export default function Portfolio() {
-  const { scrollY } = useScroll();
   const title = useRef();
-  const [height, setHeight] = useState();
-  const [scroll, setScroll] = useState();
-  const [width, setWidth] = useState();
-
-  scrollY.onChange(() => setScroll(scrollY.current));
-
-  function resizeHandler() {
-    setHeight(title.current.offsetTop);
-    setWidth(window.innerWidth)
-  }
-
-  useEffect(() => {
-    resizeHandler()
-    window.addEventListener('resize', resizeHandler)
-
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, []);
+  const { height, scroll, width } = useSlideIn(title)
 
   return (
     <section id="portfolio" className={styles.portfolio}>
