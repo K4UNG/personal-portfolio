@@ -42,7 +42,6 @@
     margin-top: .5rem;
     user-select: none;
     position: relative;
-    overflow: hidden;
     font-size: .95rem;
     display: flex;
     align-items: center;

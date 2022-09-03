@@ -1,9 +1,9 @@
 import styles from "./Banner.module.css";
 import Link from "next/link";
-import ArrowRight from "../ui/ArrowRight";
+import ArrowRight from "../../ui/ArrowRight";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { animationActions } from "../../store/animationSlice";
+import { animationActions } from "../../../store/animationSlice";
 
 export default function Banner() {
   const buttonOneRef = useRef();

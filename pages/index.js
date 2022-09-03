@@ -1,7 +1,8 @@
-import Header from "../components/home/Header"
-import Banner from "../components/home/Banner"
-import Skills from "../components/home/Skills"
-import Portfolio from "../components/home/Portfolio"
+import Header from "../components/home/Hero/Header"
+import Banner from "../components/home/Hero/Banner"
+import Skills from "../components/home/Portfolio/Skills"
+import Portfolio from "../components/home/Portfolio/Portfolio"
+import About from "../components/home/About/About"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Banner />
         <Skills />
         <Portfolio />
+        <About />
       </main>
     </div>
   )

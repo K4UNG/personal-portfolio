@@ -2,7 +2,7 @@ import styles from "./Project.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
-import { animationActions } from "../../store/animationSlice";
+import { animationActions } from "../../../store/animationSlice";
 
 export default function Project({ project }) {
   const { slug, number, image, title, lang } = project;
