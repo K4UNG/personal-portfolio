@@ -93,3 +93,16 @@
         margin: 0;
     }
 }
+
+@media (min-width: 980px) {
+    .title {
+        font-weight: 900;
+    }
+}
+
+@media (min-width: 1100px) {
+    .title {
+        position: relative;
+        left: 80vw;
+    }
+}

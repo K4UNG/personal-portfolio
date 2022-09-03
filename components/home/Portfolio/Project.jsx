@@ -1,7 +1,7 @@
 import styles from "./Project.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
 
 export default function Project({ project }) {
