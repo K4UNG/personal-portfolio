@@ -11,3 +11,10 @@
 .wrapper {
     border-top: 1px solid var(--clr-dark);
 }
+
+@media (min-width: 700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

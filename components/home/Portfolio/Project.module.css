@@ -34,3 +34,36 @@
     font-size: .8rem;
     font-weight: 500;
 }
+
+.image {
+    object-fit: cover;
+}
+
+@media (min-width: 620px) {
+    .number {
+        font-size: 3rem;
+        width: 70px;
+    }
+
+    .project span {
+        width: 100px !important;
+        height: 60px !important;
+    }
+
+    .project {
+        padding: .5rem 0;
+    }
+
+    .info {
+        margin-left: 1rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .lang {
+        font-size: 1rem;
+    }
+}

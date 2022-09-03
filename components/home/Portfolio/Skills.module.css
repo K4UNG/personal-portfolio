@@ -35,3 +35,34 @@
     font-weight: 900;
     font-size: 1.5rem;
 }
+
+.banner span {
+    height: 150px !important;
+    width: 100% !important;
+}
+
+.banner img {
+    object-fit: cover;
+}
+
+.desktop {
+    display: none;
+}
+
+@media (min-width: 620px) {
+    .desktop {
+        display: unset;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .lang {
+        font-size: min(5vw, 3rem);
+    }
+
+    .text {
+        font-size: min(5vw, 3.5rem);
+    }
+}

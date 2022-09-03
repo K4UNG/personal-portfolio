@@ -6,7 +6,7 @@ export default function Cursor() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const state = useSelector((state) => state.state);
-  const number = useSelector(state => state.number)
+  const number = useSelector((state) => state.number);
 
   function onMouseMove(event) {
     const { pageX: x, pageY: y } = event;
@@ -17,7 +17,9 @@ export default function Cursor() {
   useEffect(() => {
     document.addEventListener("mousemove", onMouseMove);
 
-    return () => document.removeEventListener("mousemove", onMouseMove);
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+    };
   }, []);
 
   return (
@@ -28,7 +30,13 @@ export default function Cursor() {
           state === "Enter" && styles.expand
         }`}
       >
-        {state === "Enter" && <>{state}<br/>{number}</>}
+        {state === "Enter" && (
+          <>
+            {state}
+            <br />
+            {number}
+          </>
+        )}
       </div>
     </div>
   );

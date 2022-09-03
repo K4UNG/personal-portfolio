@@ -9,19 +9,21 @@ export default function Skills() {
         <span className={styles.lang + " " + styles.underline}>JAVASCRIPT</span>
         <span className={styles.lang}>CSS</span>
 
-        <br />
+        <br className={styles.mobile} />
 
         <span className={styles.lang + " " + styles.underline}>REACT</span>
+        <br className={styles.desktop} />
         <span className={styles.lang}>SCSS</span>
         <span className={styles.lang + " " + styles.underline}>TYPESCRIPT</span>
 
-        <br />
+        <br className={styles.mobile} />
 
         <span className={styles.lang}>NEXTJS</span>
         <span className={styles.lang + " " + styles.underline}>PYTHON</span>
+        <br className={styles.desktop}/>
         <span className={styles.lang}>DJANGO</span>
 
-        <br />
+        <br className={styles.mobile} />
 
         <span className={styles.lang}>NODEJS</span>
         <span className={styles.lang}>GIT</span>
