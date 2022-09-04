@@ -61,6 +61,12 @@
     margin-left: .5rem;
 }
 
+.button:focus {
+    color: white;
+    background-color: var(--clr-dark);
+    outline: 0;
+}
+
 .button__overlay {
     position: absolute;
     background-color: white;

@@ -16,7 +16,6 @@ export default function Portfolio() {
       <div ref={title}>
         <motion.h2
           style={width >= 1100 ? {x} : {}}
-          transition={{ type: "spring", stiffness: 1 }}
           className={styles.title}
         >
           Portfolio

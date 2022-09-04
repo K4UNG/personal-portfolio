@@ -131,7 +131,8 @@
         position: relative;
     }
 
-    .project:hover span {
+    .project:hover span,
+    .project:focus span {
         display: unset !important;
         width: 100% !important;
         height: 100% !important;
@@ -139,7 +140,8 @@
         left: 0 !important;
     }
 
-    .project:hover .desktop {
+    .project:hover .desktop,
+    .project:focus .desktop {
         mix-blend-mode: difference;
         color: white;
     }
@@ -152,5 +154,16 @@
 
     .number {
         font-size: 5rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .number {
+        font-size: 6rem;
+    }
+
+    .lang,
+    .title {
+        font-size: 1.5rem;
     }
 }

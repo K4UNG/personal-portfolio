@@ -145,3 +145,54 @@
         width: 150px;
     }
 }
+
+@media (min-width: 1600px) {
+    .title {
+        font-size: min(var(--h2), 7rem);
+    }
+
+    .form {
+        max-width: 600px;
+    }
+
+    .control {
+        margin: 1rem 0;
+    }
+
+    .control label {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 2100px) {
+    .title {
+        font-size: min(var(--h2), 9rem);
+    }
+
+    .form {
+        min-width: 750px;
+    }
+
+    .control {
+        margin: 2rem 0 1rem;
+    }
+
+    .control label {
+        font-size: 1.5rem;
+    }
+
+    .control label.focus {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 2rem;
+        border-radius: 30px;
+        padding: 10px 1.5rem;
+    }
+
+    .button:hover,
+    .button:focus {
+        letter-spacing: 3px;
+    }
+}

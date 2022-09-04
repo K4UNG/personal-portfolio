@@ -20,6 +20,7 @@
 @media (min-width: 560px) {
     .title {
         font-size: 2rem;
+        text-align: center;
     }
     
     .wrapper {
@@ -33,6 +34,7 @@
         border-top: 1px solid var(--clr-dark-30);
         padding: 0;
         padding-top: .5rem;
+        text-align: center;
     }
 }
 
@@ -61,5 +63,26 @@
 
     .wrapper {
         grid-column-gap: 3rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .text {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 2100px) {
+    .text {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        grid-column-gap: 5rem;
     }
 }
