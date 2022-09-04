@@ -1,0 +1,21 @@
+.button {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--clr-dark);
+    padding: 5px;
+    position: absolute;
+    top: var(--padding);
+    left: var(--padding);
+}
+
+@media (min-width: 980px) {
+    .button {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+}

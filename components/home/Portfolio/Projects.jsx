@@ -1,36 +1,7 @@
 import styles from "./Projects.module.css";
 import Project from "./Project";
 
-const projects = [
-  {
-    number: "01",
-    title: "Khanner Blog",
-    lang: "Django",
-    image: "/images/keyboard.png",
-    slug: "khanner-blog",
-  },
-  {
-    number: "02",
-    title: "CookingBud",
-    lang: "React",
-    image: "/images/keyboard.png",
-    slug: "cookingbud",
-  },
-  {
-    number: "03",
-    title: "Khanner Blog",
-    lang: "Django",
-    image: "/images/keyboard.png",
-    slug: "khanner-blog",
-  },
-  {
-    number: "04",
-    title: "CookingBud",
-    lang: "React",
-    image: "/images/keyboard.png",
-    slug: "cookingbud",
-  },
-];
+const projects = require('../../../store/projects.json');
 
 export default function Projects() {
   return (

@@ -10,7 +10,7 @@ export default function Banner() {
   const buttonTwoRef = useRef();
   const spanOneRef = useRef();
   const spanTwoRef = useRef();
-  const [pos, setPos] = useState(null)
+  const [pos, setPos] = useState(null);
   const dispatch = useDispatch();
 
   function onMouseEnter(e, ref) {
@@ -19,15 +19,14 @@ export default function Banner() {
     setPos({
       x: pageX - offsetLeft + "px",
       y: pageY - offsetTop + "px",
-      ref: ref
+      ref: ref,
     });
     dispatch(animationActions.hideCursor());
-    
   }
 
   function onMouseLeave(ref) {
-    ref.current?.classList.add(styles.out)
-    dispatch(animationActions.removeState())
+    ref.current?.classList.add(styles.out);
+    dispatch(animationActions.removeState());
   }
 
   return (
@@ -42,30 +41,48 @@ export default function Banner() {
         <div className={styles.blank}>
           <nav className={styles.list}>
             <ul>
-              <li><a href="#home" alt="scroll to home">Home</a></li>
-              <li><a href="#portfolio" alt="scroll to protfolio">Portfolio</a></li>
-              <li><a href="#about" alt="scroll to about">About</a></li>
-              <li><a href="#contact" alt="scroll to contact">Contact</a></li>
+              <li>
+                <a href="#home" alt="scroll to home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" alt="scroll to protfolio">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#about" alt="scroll to about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#contact" alt="scroll to contact">
+                  Contact
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
-          <div className={styles.work}>
-            Available for work at{" "}
-            <a href="mailto:kgzinhein.my@gmail.com" alt="mail link">
-              kgzinhein.my@gmail.com
-            </a>
-            .
-          </div>
+      <div className={styles.work}>
+        Available for work at{" "}
+        <a href="mailto:kgzinhein.my@gmail.com" alt="mail link">
+          kgzinhein.my@gmail.com
+        </a>
+        .
+      </div>
 
       <div className={styles.banner__bottom}>
-        <p className={styles.strong}>An individual with passion for creative development</p>
+        <p className={styles.strong}>
+          An individual with passion for creative development
+        </p>
         <div className={styles.banner__text}>
           <div className={styles.text__container}>
             <p className={styles.text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem impedit explicabo consequuntur deserunt incidunt
-              doloribus debitis ipsum quos molestias odio?
+              A passionate self-taght developer from a third-world country,
+              looking for opportunities to deliver best possible services and
+              values.
             </p>
             <a
               className={styles.button}
@@ -88,14 +105,13 @@ export default function Banner() {
           </div>
           <div className={styles.text__container}>
             <p className={styles.text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem impedit explicabo consequuntur deserunt incidunt
-              doloribus debitis ipsum quos molestias odio?
+              Fancy some web-related knowledge? Or simply just interested in my
+              personal life? Check out my blog where I post all kinds of things.
             </p>
             <Link href="/blog" alt="blog">
               <a
                 className={styles.button}
-                onMouseEnter={e => onMouseEnter(e, buttonTwoRef)}
+                onMouseEnter={(e) => onMouseEnter(e, buttonTwoRef)}
                 onMouseLeave={() => onMouseLeave(spanTwoRef)}
                 ref={buttonTwoRef}
               >

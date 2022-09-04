@@ -18,7 +18,7 @@ export default function About() {
   const x = useTransform(
     scrollY,
     [0, top - height, scroll],
-    [0, 0, -.8 * scroll]
+    [0, 0, -0.8 * scroll]
   );
 
   function onMouseEnter(e) {
@@ -50,16 +50,26 @@ export default function About() {
         <div className={styles.content}>
           <h3 className={styles.name}>I'm Kaung Zin Hein</h3>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-            maiores amet voluptates necessitatibus soluta accusantium!
+            I'm a self-taught junior{" "}
+            <span className={styles.strong}>frontend</span> developer from{" "}
+            <span className={styles.strong}>Myanmar</span>. I'm currently
+            expanding my knowledge into the world or backend and databases. I
+            also have quite a lot of interest in{" "}
+            <span className={styles.strong}>UI/UX</span> design.
           </p>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-            maiores amet voluptates necessitatibus soluta accusantium!
+            I love <span className={styles.strong}>CSS</span> as you'll see in
+            many of my projects, where I used it extensively. It's also what got
+            me into web development ultimately. My love for{" "}
+            <span className={styles.strong}>minimal and interaction</span>{" "}
+            design can also be seen in this webiste.
           </p>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-            maiores amet voluptates necessitatibus soluta accusantium!
+            When I'm not coding, you can probably find me playing{" "}
+            <span className={styles.strong}>Rubik's cube</span>, listening to
+            music or playing games. I love listening to{" "}
+            <span className={styles.strong}>Soft pop, kpop</span> and piano. I
+            also love watching Sci-fi, mystery movies.
           </p>
 
           <a
