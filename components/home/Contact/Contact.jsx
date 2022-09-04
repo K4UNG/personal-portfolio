@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
 import Image from 'next/image';
+import ArrowTopRight from '../../ui/ArrowTopRight';
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -27,11 +28,11 @@ export default function Contact() {
   }
 
   return (
-    <div className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <div className={styles.image}>
         <Image src="/images/letter.jpg" className={styles.image} height='800' width='700' />
         <div className={styles.overlay} />
-        <h2 className={styles.title}>Get in Touch</h2>
+        <h2 className={styles.title}>Get in Touch <br/><ArrowTopRight /></h2>
       </div>
       <div className={styles.form}>
         <form onSubmit={submitHandler}>
@@ -77,6 +78,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }

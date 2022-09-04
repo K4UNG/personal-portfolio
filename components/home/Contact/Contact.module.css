@@ -16,6 +16,11 @@
     font-size: var(--h2);
 }
 
+.title svg {
+    width: 100px;
+    display: none;
+}
+
 .control {
     position: relative;
 }
@@ -55,11 +60,12 @@
     text-transform: uppercase;
     border-radius: 15px;
     margin-top: 1rem;
-    transition: transform 150ms ease;
+    transition: letter-spacing 150ms ease;
 }
 
-.button:hover {
-    transform: scale(1.1);
+.button:hover,
+.button:focus {
+    letter-spacing: 2px;
 }
 
 .control label.focus {
@@ -118,5 +124,24 @@
         width: 90%;
         margin: auto;
         max-width: 400px;
+    }
+
+    .title svg {
+        display: unset;
+    }
+}
+
+@media (min-width: 1100px) {
+    .image span {
+        height: 100vh !important;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        border-radius: 20px;
+    }
+
+    .title svg {
+        width: 150px;
     }
 }

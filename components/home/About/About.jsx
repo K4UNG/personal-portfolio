@@ -32,7 +32,7 @@ export default function About() {
   }
 
   return (
-    <div className={styles.about}>
+    <section id="about" className={styles.about}>
       <div ref={title}>
         <motion.h2 style={width >= 1100 ? { x } : {}} className={styles.title}>
           About
@@ -87,6 +87,6 @@ export default function About() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

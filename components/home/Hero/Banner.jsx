@@ -31,7 +31,7 @@ export default function Banner() {
   }
 
   return (
-    <section className={styles.banner}>
+    <section id="home" className={styles.banner}>
       <div className={styles.banner__top}>
         <h1 className={styles.title}>
           <div className={styles.title__first}>Exceptional</div>
@@ -42,10 +42,10 @@ export default function Banner() {
         <div className={styles.blank}>
           <nav className={styles.list}>
             <ul>
-              <li>Home</li>
-              <li>Portfolio</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li><a href="#home" alt="scroll to home">Home</a></li>
+              <li><a href="#portfolio" alt="scroll to protfolio">Portfolio</a></li>
+              <li><a href="#about" alt="scroll to about">About</a></li>
+              <li><a href="#contact" alt="scroll to contact">Contact</a></li>
             </ul>
           </nav>
         </div>
