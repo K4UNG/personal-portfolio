@@ -18,10 +18,11 @@ export default function Project({ project }) {
         <div className={styles.number}>{number}</div>
         <Image
           className={styles.image}
-          src={image}
+          src={`/images/${slug}/banner.png`}
           alt={title}
-          width="600"
-          height="800"
+          width="800"
+          height="100"
+          loading="eager"
         />
         <div className={styles.info}>
           <h4 className={styles.title}>{title}</h4>

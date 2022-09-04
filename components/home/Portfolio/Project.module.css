@@ -9,6 +9,11 @@
 .project>span {
     width: 80px !important;
     height: 45px !important;
+    background-color: var(--clr-dark) !important;
+}
+
+.project img {
+    opacity: .8;
 }
 
 .number {
@@ -104,7 +109,7 @@
     }
 
     .project span {
-        display: none !important;
+        opacity: 0 !important;
         position: absolute !important;
     }
 
@@ -126,6 +131,10 @@
         width: unset;
     }
 
+    .title,.lang {
+        font-weight: 700;
+    }
+
     .project:nth-child(3) .desktop {
         top: 2rem;
         position: relative;
@@ -133,7 +142,7 @@
 
     .project:hover span,
     .project:focus span {
-        display: unset !important;
+        opacity: .9 !important;
         width: 100% !important;
         height: 100% !important;
         top: 0 !important;

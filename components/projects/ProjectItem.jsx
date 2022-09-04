@@ -4,14 +4,15 @@ import ArrowTopRight from "../ui/ArrowTopRight";
 import BackButton from "../ui/BackButton";
 
 export default function Project({ project }) {
+  const { title, slug, text1, text2, text3, text4, live, repo } = project;
   return (
     <div className={styles.project}>
       <div className={styles.banner}>
         <Image
-          src="/images/keyboard.png"
+          src={`/images/${slug}/banner.png`}
           alt="keyboard"
           width="1200"
-          height="400"
+          height="600"
         />
         <BackButton />
       </div>
@@ -20,54 +21,51 @@ export default function Project({ project }) {
           <div className={styles.links}>
             <a
               className={styles.link}
-              href="https://example.com"
+              href={live}
               target="_blank"
               rel="noreferrer"
             >
               See it live <ArrowTopRight />
             </a>
-            <a
+            {repo && <a
               className={styles.link}
-              href="https://example.com"
+              href={repo}
               target="_blank"
               rel="noreferrer"
             >
               Repo <ArrowTopRight />
-            </a>
+            </a>}
           </div>
-          <h1 className={styles.title}>Khanner Blog</h1>
+          <h1 className={styles.title}>{title}</h1>
 
           <div className={styles.body}>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              nesciunt vitae nostrum fugiat. Itaque iste libero officiis neque
-              expedita fugit, necessitatibus aliquid quo quae recusandae?
+              {text1}
             </p>
 
             <Image
-              src="/images/keyboard.png"
+              src={`/images/${slug}/preview.png`}
               alt="keyboard"
-              width="1200"
+              width="700"
               height="400"
             />
 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              nesciunt vitae nostrum fugiat. Itaque iste libero officiis neque
-              expedita fugit, necessitatibus aliquid quo quae recusandae?
+              {text2}
+            </p>
+            <p>
+              {text3}
             </p>
 
             <Image
-              src="/images/keyboard.png"
+              src={`/images/${slug}/design.png`}
               alt="keyboard"
-              width="1200"
+              width="700"
               height="400"
             />
 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              nesciunt vitae nostrum fugiat. Itaque iste libero officiis neque
-              expedita fugit, necessitatibus aliquid quo quae recusandae?
+              {text4}
             </p>
           </div>
         </div>

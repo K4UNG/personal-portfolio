@@ -7,6 +7,14 @@
     height: 150px !important;
 }
 
+.banner img {
+    opacity: .6;
+}
+
+.project span {
+    background-color: black !important;
+}
+
 .title {
     text-transform: uppercase;
     text-align: center;
