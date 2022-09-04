@@ -20,8 +20,8 @@ export default function Project({ project }) {
           className={styles.image}
           src={image}
           alt={title}
-          width="300"
-          height="200"
+          width="600"
+          height="800"
         />
         <div className={styles.info}>
           <h4 className={styles.title}>{title}</h4>

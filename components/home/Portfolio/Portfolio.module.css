@@ -1,5 +1,6 @@
 .portfolio {
     padding: 3rem var(--padding);
+    overflow: hidden;
 }
 
 .title {

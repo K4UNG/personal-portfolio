@@ -32,3 +32,21 @@
         display: unset;
     }
 }
+
+@media (min-width: 1600px) {
+    .tags {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2100px) {
+    .tags {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 2600px) {
+    .tags {
+        font-size: 1.8rem;
+    }
+}

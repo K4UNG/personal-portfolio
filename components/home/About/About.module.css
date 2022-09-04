@@ -1,5 +1,6 @@
 .about {
     padding: 0 var(--padding) 2rem;
+    overflow: hidden;
 }
 
 .title {
@@ -147,5 +148,6 @@
     .container {
         max-width: 1100px;
         margin: 1rem auto 0;
+        grid-column-gap: 5rem;
     }
 }

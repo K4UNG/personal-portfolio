@@ -76,3 +76,27 @@
         margin: 4rem 0 5rem;
     }
 }
+
+@media (min-width: 1800px) {
+    .lang {
+        font-size: min(5vw, 5rem);
+    }
+
+    .text {
+        font-size: min(5vw, 4rem);
+    }
+}
+
+@media (min-width: 2100px) {
+    .lang {
+        font-size: min(5vw, 7rem);
+    }
+
+    .text {
+        font-size: min(5vw, 5rem);
+    }
+
+    .banner span {
+        height: 250px !important;
+    }
+}
