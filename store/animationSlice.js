@@ -4,7 +4,8 @@ const animationSlice = createSlice({
     name: 'animation',
     initialState: {
         state: null,
-        number: '01'
+        number: '01',
+        text: ''
     },
     reducers: {
         removeState(state) {
@@ -18,8 +19,8 @@ const animationSlice = createSlice({
             state.state = payload
         },
         project(state, payload) {
-            state.state = 'Enter'
-            state.number = payload.payload
+            state.state = 'expand'
+            state.text = payload.payload
         }
     }
 })

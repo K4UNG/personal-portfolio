@@ -6,6 +6,7 @@ export default function Cursor() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const state = useSelector((state) => state.state);
+  const text = useSelector((state) => state.text);
 
   function onMouseMove(event) {
     const { clientX: x, clientY: y } = event;
@@ -26,12 +27,12 @@ export default function Cursor() {
       <div
         style={{ top: y + "px", left: x + "px" }}
         className={`${styles.cursor} ${state === "hide" && styles.hidden} ${
-          state === "Enter" && styles.expand
+          state === "expand" && styles.expand
         }`}
       >
-        {state === "Enter" && (
+        {state === "expand" && (
           <>
-            {state}
+            {text}
           </>
         )}
       </div>

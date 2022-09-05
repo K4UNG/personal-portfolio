@@ -1,0 +1,8 @@
+.list {
+    padding: 1rem var(--padding);
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}

@@ -5,14 +5,14 @@ import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
 
 export default function Project({ project }) {
-  const { slug, number, image, title, lang } = project;
+  const { slug, number, title, lang } = project;
   const dispatch = useDispatch();
 
   return (
     <Link href={"/projects/" + slug}>
       <a
         className={styles.project}
-        onMouseEnter={() => dispatch(animationActions.project(number))}
+        onMouseEnter={() => dispatch(animationActions.project('Enter'))}
         onMouseLeave={() => dispatch(animationActions.removeState())}
       >
         <div className={styles.number}>{number}</div>
