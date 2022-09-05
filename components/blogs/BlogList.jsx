@@ -32,7 +32,7 @@ const blogs = [
     alug: "some-title",
     timeToRead: 13,
     isFeatured: true,
-    overview: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, corrupti."
+    overview: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, corrupti. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, corrupti."
   },
 ];
 

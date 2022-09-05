@@ -11,6 +11,7 @@
     transition: transform 150ms ease, width 150ms ease, height 150ms ease;
     z-index: 999;
     font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .cursor.hidden {
@@ -29,7 +30,7 @@
 
 @media (min-width: 1100px) {
     .cursor.expand {
-        width: 100px;
-        height: 100px;
+        width: 85px;
+        height: 85px;
     }
 }

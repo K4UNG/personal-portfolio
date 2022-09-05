@@ -36,3 +36,31 @@
     font-size: .9rem;
     margin-left: .5rem;
 }
+
+@media (min-width: 780px) {
+    .featured {
+        height: 300px;
+    }
+
+    .text {
+        height: 50px;
+        top: unset;
+        bottom: 0;
+        background-color: var(--clr-dark);
+    }
+
+    .title {
+        font-size: .9rem;
+    }
+
+    .time {
+        font-size: .8rem;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+}
+
+@media (min-width: 1200px) {
+    .featured {
+        height: 400px
+    }
+}
