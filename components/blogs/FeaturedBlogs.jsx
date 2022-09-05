@@ -1,5 +1,6 @@
 import styles from "./FeaturedBlogs.module.css";
 import FeaturedItem from "./FeaturedItem";
+import HomeButton from '../ui/HomeButton'
 
 const blogs = [
   {
@@ -35,6 +36,9 @@ const blogs = [
 export default function FeaturedBlogs() {
   return (
     <div className={styles.featured}>
+      <div className={styles.head}>
+        <HomeButton />
+      </div>
       <h1 className={styles.title}>Featured Posts</h1>
       <div className={styles.wrapper}>
         {blogs

@@ -31,9 +31,9 @@ export default function Cursor() {
         }`}
       >
         {state === "expand" && (
-          <>
+          <span className={styles.text}>
             {text}
-          </>
+          </span>
         )}
       </div>
     </div>
