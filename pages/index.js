@@ -9,21 +9,24 @@ import { useDispatch } from "react-redux";
 import { animationActions } from "../store/animationSlice";
 
 export default function Home() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    return () => dispatch(animationActions.removeState())
-  }, [])
+    return () => {
+      dispatch(animationActions.removeState());
+    };
+  }, []);
 
   return (
-      <div>
-        <Header />
-        <main>
-          <Banner />
-          <Skills />
-          <Portfolio />
-          <About />
-          <Contact />
-        </main>
-      </div>
+    <div>
+      <Header />
+      <main>
+        <Banner />
+        <Skills />
+        <Portfolio />
+        <About />
+        <Contact />
+      </main>
+    </div>
   );
 }

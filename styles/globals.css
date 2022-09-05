@@ -38,6 +38,10 @@ a {
   scroll-behavior: smooth;
 }
 
+:root.smooth {
+  scroll-behavior: unset;
+}
+
 ::selection {
   background-color: var(--clr-dark);
   color: var(--clr-light)

@@ -3,8 +3,9 @@ import Cursor from "../components/ui/Cursor";
 import { useState, useEffect } from "react";
 import { Provider } from "react-redux";
 import store from "../store";
+import { AnimatePresence, motion } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const [isTouch, setIsTouch] = useState();
 
   useEffect(() => {
@@ -21,7 +22,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
-        <Component {...pageProps} />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={router.route}
+          exit={{ opacity: 0 }}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
       {!isTouch && <Cursor />}
     </Provider>
   );

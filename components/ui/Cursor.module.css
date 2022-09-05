@@ -24,6 +24,7 @@
     display: grid;
     place-items: center;
     text-align: center;
+    border: 1px solid var(--clr-dark);
 }
 
 @media (min-width: 1100px) {

@@ -57,13 +57,13 @@ export default function About() {
             also have quite a lot of interest in{" "}
             <span className={styles.strong}>UI/UX</span> design.
           </p>
-          <p className={styles.text}>
+          {/* <p className={styles.text}>
             I love <span className={styles.strong}>CSS</span> as you'll see in
             many of my projects, where I used it extensively. It's also what got
             me into web development ultimately. My love for{" "}
             <span className={styles.strong}>minimal and interaction</span>{" "}
             design can also be seen in this webiste.
-          </p>
+          </p> */}
           <p className={styles.text}>
             When I'm not coding, you can probably find me playing{" "}
             <span className={styles.strong}>Rubik's cube</span>, listening to
