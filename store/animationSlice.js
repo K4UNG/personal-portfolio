@@ -21,6 +21,10 @@ const animationSlice = createSlice({
         project(state, payload) {
             state.state = 'expand'
             state.text = payload.payload
+        },
+        image(state, payload) {
+            state.state = 'image'
+            state.text = payload.payload
         }
     }
 })

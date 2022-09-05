@@ -1,10 +1,18 @@
+.wrapper {
+    background-color: var(--clr-dark);
+}
+
 .featured {
     height: 150px;
     position: relative;
     display: block;
     margin-bottom: .5rem;
-    background-color: var(--clr-dark);
     color: var(--clr-light);
+    transition: opacity 100ms ease;
+}
+
+.featured:hover {
+    opacity: .5;
 }
 
 .image {
@@ -13,7 +21,7 @@
     left: 0;
     height: 100%;
     object-fit: cover;
-    opacity: .5;
+    opacity: .8;
 }
 
 .text {

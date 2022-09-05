@@ -8,7 +8,7 @@
     mix-blend-mode: difference;
     border-radius: 50%;
     transform-origin: center;
-    transition: transform 150ms ease, width 150ms ease, height 150ms ease;
+    transition: transform 150ms ease, width 150ms ease, height 150ms ease, border-radius 150ms ease;
     z-index: 999;
     font-weight: 500;
 }
@@ -25,6 +25,19 @@
     place-items: center;
     text-align: center;
     border: 1px solid var(--clr-dark);
+}
+
+.cursor.image {
+    border-radius: unset;
+    width: 150px;
+    height: 100px;
+    mix-blend-mode: normal;
+}
+
+.cursor img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .text {

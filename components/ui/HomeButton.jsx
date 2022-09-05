@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { animationActions } from "../../store/animationSlice";
 
 export default function HomeButton() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Link href="/" alt="home">

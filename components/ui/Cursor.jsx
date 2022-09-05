@@ -1,6 +1,7 @@
 import styles from "./Cursor.module.css";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { urlFor } from "../../sanity";
 
 export default function Cursor() {
   const [x, setX] = useState(0);
@@ -28,13 +29,10 @@ export default function Cursor() {
         style={{ top: y + "px", left: x + "px" }}
         className={`${styles.cursor} ${state === "hide" && styles.hidden} ${
           state === "expand" && styles.expand
-        }`}
+        } ${state === "image" && styles.image}`}
       >
-        {state === "expand" && (
-          <span className={styles.text}>
-            {text}
-          </span>
-        )}
+        {state === "image" && <img src={urlFor(text)} />}
+        {state === "expand" && <span className={styles.text}>{text}</span>}
       </div>
     </div>
   );
