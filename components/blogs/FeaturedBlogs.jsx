@@ -33,7 +33,7 @@ const blogs = [
   },
 ];
 
-export default function FeaturedBlogs() {
+export default function FeaturedBlogs({ blogs }) {
   return (
     <div className={styles.featured}>
       <div className={styles.head}>
@@ -42,9 +42,8 @@ export default function FeaturedBlogs() {
       <h1 className={styles.title}>Featured Posts</h1>
       <div className={styles.wrapper}>
         {blogs
-          .filter((b) => b.isFeatured)
           .map((blog) => (
-            <FeaturedItem key={Math.random()} blog={blog} />
+            <FeaturedItem key={blog._id} blog={blog} />
           ))}
       </div>
     </div>

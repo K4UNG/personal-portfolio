@@ -36,13 +36,13 @@ const blogs = [
   },
 ];
 
-export default function BlogList() {
+export default function BlogList({ blogs }) {
   return (
     <div className={styles.list}>
       <h2 className={styles.title}>All posts</h2>
       <div className={styles.wrapper}>
         {blogs.map((b) => (
-          <BlogItem key={Math.random()} blog={b} />
+          <BlogItem key={b._id} blog={b} />
         ))}
       </div>
     </div>

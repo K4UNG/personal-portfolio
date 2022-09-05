@@ -2,9 +2,10 @@ import styles from "./BlogItem.module.css";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../store/animationSlice";
+import { urlFor } from "../../sanity";
 
 export default function BlogItem({ blog }) {
-  const { title, image, overview, slug, timeToRead } = blog;
+  const { title, mainImage, overview, slug, timeToRead } = blog;
   const dispatch = useDispatch();
   return (
     <div className={styles.wrapper}>
@@ -17,7 +18,7 @@ export default function BlogItem({ blog }) {
           className={styles.blog}
         >
           <div className={styles.image}>
-            <img src={image} alt={title} />
+            <img src={urlFor(mainImage)} alt={title} />
           </div>
           <div className={styles.text}>
             <h3 className={styles.title}>{title}</h3>
