@@ -21,6 +21,7 @@ export default function CommentList({ comments }) {
           </li>
         );
       })}
+      {comments.length === 0 && <li className={styles.empty}>No Comments</li>}
     </ul>
   );
 }

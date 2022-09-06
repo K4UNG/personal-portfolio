@@ -17,3 +17,11 @@ export function urlFor(source) {
 }
 
 export default client;
+
+export const writeClient = createClient({
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  dataset: "production",
+  apiVersion: "2022-09-05",
+  token: process.env.API_TOKEN,
+  useCdn: true
+})

@@ -5,18 +5,38 @@ import { PortableText } from "@portabletext/react";
 import Comments from "./Comments";
 
 export default function Blog({ blog }) {
-  const { mainImage, title, body, publishedAt, comments } = blog;
+  const { mainImage, title, body, publishedAt, comments, _id } = blog;
   const date = new Date(publishedAt);
+
+  async function submitHandler(e, name, message) {
+    e.preventDefault();
+    const res = await fetch("/api/post-comment", {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        message,
+        _id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json()
+    console.log(data)
+  }
+
   return (
     <div>
       <div className={styles.banner}>
         <BackButton />
         <img className={styles.image} src={urlFor(mainImage)} alt={title} />
-        <div className={styles.date}>{date.toLocaleString('en-GB', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        })}</div>
+        <div className={styles.date}>
+          {date.toLocaleString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </div>
       </div>
       <div className={styles.body}>
         <h1 className={styles.title}>{title}</h1>
@@ -29,9 +49,7 @@ export default function Blog({ blog }) {
                   return <img src={urlFor(value)} alt={title} />;
                 },
                 callToAction: ({ value }) => (
-                  <a href={value.url}>
-                    {value.text}
-                  </a>
+                  <a href={value.url}>{value.text}</a>
                 ),
               },
               marks: {
@@ -48,7 +66,7 @@ export default function Blog({ blog }) {
         </article>
       </div>
 
-      <Comments comments={comments} />
+      <Comments submitHandler={submitHandler} comments={comments} />
     </div>
   );
 }

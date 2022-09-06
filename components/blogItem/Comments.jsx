@@ -2,7 +2,7 @@ import styles from "./Comments.module.css";
 import { useState, useRef } from "react";
 import CommentList from "./CommentList";
 
-export default function Comments({ comments }) {
+export default function Comments({ comments, submitHandler }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const wrapper = useRef();
@@ -10,7 +10,7 @@ export default function Comments({ comments }) {
   return (
     <div className={styles.comments}>
       <h2 className={styles.title}>Comments</h2>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={e => submitHandler(e, name, message)}>
         <label htmlFor="name">Comment as</label>
         <br />
         <input

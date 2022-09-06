@@ -19,6 +19,12 @@
     font-size: .9rem;
 }
 
+.empty {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
 @media (min-width: 680px) {
     .comment {
         display: flex;
@@ -32,6 +38,7 @@
     .info {
         align-self: flex-end;
         flex-shrink: 0;
+        text-align: right;
     }
 }
 

@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const data = await client.fetch(
-    `*[_type=='post' && slug.current=='${slug}']{mainImage,title,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id]}`
+    `*[_type=='post' && slug.current=='${slug}']{mainImage,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true]}`
   );
   console.log(data);
 
