@@ -1,7 +1,3 @@
-.project img {
-    object-fit: cover;
-}
-
 .banner span {
     width: 100% !important;
     height: 150px !important;
@@ -51,18 +47,14 @@
 }
 
 .body span {
-    width: 100% !important;
-    height: 200px !important;
+    height: auto;
+    width: 100%;
 }
 
 @media (min-width: 680px) {
     .body p {
         text-align: center;
         font-size: 1.2rem;
-    }
-
-    .body span {
-        height: 300px !important;
     }
 
     .title {

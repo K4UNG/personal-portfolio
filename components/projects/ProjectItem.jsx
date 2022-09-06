@@ -13,6 +13,7 @@ export default function Project({ project }) {
           alt="keyboard"
           width="1200"
           height="600"
+          objectFit="cover"
         />
         <BackButton />
       </div>
@@ -46,8 +47,11 @@ export default function Project({ project }) {
             <Image
               src={`/images/${slug}/preview.png`}
               alt="keyboard"
-              width="700"
+              width="900"
               height="400"
+              layout="responsive"
+              objectFit="cover"
+              style={{height: "auto", width: "100%"}}
             />
 
             <p>
@@ -60,8 +64,10 @@ export default function Project({ project }) {
             <Image
               src={`/images/${slug}/design.png`}
               alt="keyboard"
-              width="700"
+              width="900"
               height="400"
+              layout="responsive"
+              objectFit="cover"
             />
 
             <p>
