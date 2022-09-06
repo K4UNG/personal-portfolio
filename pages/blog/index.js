@@ -1,8 +1,17 @@
 import FeaturedBlogs from "../../components/blogs/FeaturedBlogs"
 import BlogList from "../../components/blogs/BlogList"
 import client from "../../sanity"
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { animationActions } from "../../store/animationSlice";
 
 export default function BlogsPage({ blogs }) {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        return () => dispatch(animationActions.removeState())
+    }, [])
+
     return <div className="blogs">
         <FeaturedBlogs blogs={blogs.filter(b => b.isFeatured)} />
         <BlogList blogs={blogs} />

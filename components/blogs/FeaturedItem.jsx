@@ -5,11 +5,11 @@ import { animationActions } from "../../store/animationSlice";
 import { useDispatch } from "react-redux";
 
 export default function FeaturedItem({ blog }) {
-  const { title, timeToRead, mainImage } = blog;
+  const { title, timeToRead, mainImage, slug } = blog;
   const dispatch = useDispatch();
   return (
     <div className={styles.wrapper}>
-      <Link href={"/blog/"}>
+      <Link href={"/blog/"+slug.current}>
         <a
           onMouseEnter={() => dispatch(animationActions.image(mainImage))}
           onMouseLeave={() => dispatch(animationActions.removeState())}

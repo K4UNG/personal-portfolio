@@ -9,7 +9,7 @@ export default function BlogItem({ blog }) {
   const dispatch = useDispatch();
   return (
     <div className={styles.wrapper}>
-      <Link href={"/blog"} alt={title}>
+      <Link href={"/blog/"+slug.current} alt={title}>
         <a
           onMouseEnter={() =>
             dispatch(animationActions.project(timeToRead + "mins"))

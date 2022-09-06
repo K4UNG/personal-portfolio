@@ -1,11 +1,19 @@
 import styles from "./BackButton.module.css";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { animationActions } from "../../store/animationSlice";
 
 export default function BackButton() {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   return (
-    <button className={styles.button} onClick={() => router.back()}>
+    <button
+      className={styles.button}
+      onClick={() => router.back()}
+      onMouseEnter={() => dispatch(animationActions.hideCursor())}
+      onMouseLeave={() => dispatch(animationActions.removeState())}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -10,6 +10,15 @@
     position: absolute;
     top: var(--padding);
     left: var(--padding);
+    transition: background-color 150ms ease;
+}
+
+.button:hover {
+    background-color: var(--clr-dark);
+}
+
+.button:hover svg {
+    color: white;
 }
 
 @media (min-width: 980px) {
