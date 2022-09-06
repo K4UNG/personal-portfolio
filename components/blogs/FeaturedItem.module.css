@@ -7,7 +7,7 @@
     position: relative;
     display: block;
     margin-bottom: .5rem;
-    color: var(--clr-light);
+    color: white;
     transition: opacity 100ms ease;
 }
 
@@ -21,7 +21,7 @@
     left: 0;
     height: 100%;
     object-fit: cover;
-    opacity: .8;
+    opacity: .5;
 }
 
 .text {
@@ -64,6 +64,10 @@
     .time {
         font-size: .8rem;
         font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .image {
+        opacity: 1;
     }
 }
 

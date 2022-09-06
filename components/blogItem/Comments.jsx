@@ -1,10 +1,11 @@
 import styles from "./Comments.module.css";
 import { useState, useRef } from "react";
+import CommentList from "./CommentList";
 
-export default function Comments() {
+export default function Comments({ comments }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const wrapper = useRef()
+  const wrapper = useRef();
 
   return (
     <div className={styles.comments}>
@@ -40,6 +41,10 @@ export default function Comments() {
           </div>
         </div>
       </form>
+
+      <CommentList
+        comments={comments}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import styles from "./Cursor.module.css";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { animationActions } from "../../store/animationSlice";
 import { urlFor } from "../../sanity";
 
 export default function Cursor() {
@@ -8,6 +9,7 @@ export default function Cursor() {
   const [y, setY] = useState(0);
   const state = useSelector((state) => state.state);
   const text = useSelector((state) => state.text);
+  const dispatch = useDispatch();
 
   function onMouseMove(event) {
     const { clientX: x, clientY: y } = event;
@@ -15,11 +17,23 @@ export default function Cursor() {
     setY(y);
   }
 
+  function onMouseEnter() {
+    dispatch(animationActions.removeState());
+  }
+
+  function onMouseLeave() {
+    dispatch(animationActions.hideCursor());
+  }
+
   useEffect(() => {
     document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseenter", onMouseEnter);
+    document.addEventListener("mouseleave", onMouseLeave);
 
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseenter", onMouseEnter);
+      document.removeEventListener("mouseleave", onMouseLeave);
     };
   }, []);
 

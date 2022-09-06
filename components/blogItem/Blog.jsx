@@ -5,7 +5,7 @@ import { PortableText } from "@portabletext/react";
 import Comments from "./Comments";
 
 export default function Blog({ blog }) {
-  const { mainImage, title, body, publishedAt } = blog;
+  const { mainImage, title, body, publishedAt, comments } = blog;
   const date = new Date(publishedAt);
   return (
     <div>
@@ -26,7 +26,6 @@ export default function Blog({ blog }) {
             components={{
               types: {
                 image: ({ value }) => {
-                  console.log(value);
                   return <img src={urlFor(value)} alt={title} />;
                 },
                 callToAction: ({ value }) => (
@@ -49,7 +48,7 @@ export default function Blog({ blog }) {
         </article>
       </div>
 
-      <Comments />
+      <Comments comments={comments} />
     </div>
   );
 }

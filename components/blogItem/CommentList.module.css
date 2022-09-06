@@ -1,0 +1,42 @@
+.list {
+    border-top: 1px solid var(--clr-dark-30);
+    margin: 3rem auto 0;
+    list-style: none;
+    max-width: 1100px;
+}
+
+.comment {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--clr-dark-30);
+}
+
+.message {
+    font-weight: 600;
+}
+
+.info {
+    font-style: italic;
+    font-size: .9rem;
+}
+
+@media (min-width: 680px) {
+    .comment {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .message {
+        margin-bottom: 1rem;
+    }
+
+    .info {
+        align-self: flex-end;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .message {
+        font-size: 1.1rem;
+    }
+}
