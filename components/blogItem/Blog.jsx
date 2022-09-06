@@ -8,23 +8,6 @@ export default function Blog({ blog }) {
   const { mainImage, title, body, publishedAt, comments, _id } = blog;
   const date = new Date(publishedAt);
 
-  async function submitHandler(e, name, message) {
-    e.preventDefault();
-    const res = await fetch("/api/post-comment", {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        message,
-        _id,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json()
-    console.log(data)
-  }
-
   return (
     <div>
       <div className={styles.banner}>
@@ -66,7 +49,7 @@ export default function Blog({ blog }) {
         </article>
       </div>
 
-      <Comments submitHandler={submitHandler} comments={comments} />
+      <Comments comments={comments} id={_id} />
     </div>
   );
 }

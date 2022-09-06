@@ -22,5 +22,5 @@ export default async function handler(req, res) {
         return res.status(500).json(err)
     }
 
-    res.status(200).json({ message: 'Comment Submitted' })
+    return res.status(200).json({ message: 'Comment Submitted' })
 }
