@@ -32,6 +32,10 @@
     margin: 0 1rem;
 }
 
+.link:hover {
+    font-weight: 700;
+}
+
 .link svg {
     width: 15px;
 }

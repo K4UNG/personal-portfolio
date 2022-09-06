@@ -1,0 +1,53 @@
+.comments {
+    padding: 1rem var(--padding);
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--clr-dark-50);
+    padding: .5rem .25rem;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-bottom: 3px solid var(--clr-dark);
+    outline: 0;
+}
+
+.form label {
+    display: inline-block;
+    margin: 1rem 0 .25rem;
+    font-weight: 600;
+}
+
+.button {
+    background-color: var(--clr-dark);
+    color: white;
+    font-weight: 600;
+    padding: 3px 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.message {
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    transition: height 200ms ease;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

@@ -2,9 +2,13 @@ import styles from "./ProjectItem.module.css";
 import Image from "next/image";
 import ArrowTopRight from "../ui/ArrowTopRight";
 import BackButton from "../ui/BackButton";
+import { useDispatch } from "react-redux";
+import { animationActions } from "../../store/animationSlice";
 
 export default function Project({ project }) {
   const { title, slug, text1, text2, text3, text4, live, repo } = project;
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.project}>
       <div className={styles.banner}>
@@ -21,6 +25,8 @@ export default function Project({ project }) {
         <div className={styles.head}>
           <div className={styles.links}>
             <a
+              onMouseEnter={() => dispatch(animationActions.hideCursor())}
+              onMouseLeave={() => dispatch(animationActions.removeState())}
               className={styles.link}
               href={live}
               target="_blank"
@@ -28,21 +34,23 @@ export default function Project({ project }) {
             >
               See it live <ArrowTopRight />
             </a>
-            {repo && <a
-              className={styles.link}
-              href={repo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Repo <ArrowTopRight />
-            </a>}
+            {repo && (
+              <a
+                onMouseEnter={() => dispatch(animationActions.hideCursor())}
+                onMouseLeave={() => dispatch(animationActions.removeState())}
+                className={styles.link}
+                href={repo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repo <ArrowTopRight />
+              </a>
+            )}
           </div>
           <h1 className={styles.title}>{title}</h1>
 
           <div className={styles.body}>
-            <p>
-              {text1}
-            </p>
+            <p>{text1}</p>
 
             <Image
               src={`/images/${slug}/preview.png`}
@@ -51,15 +59,11 @@ export default function Project({ project }) {
               height="400"
               layout="responsive"
               objectFit="cover"
-              style={{height: "auto", width: "100%"}}
+              style={{ height: "auto", width: "100%" }}
             />
 
-            <p>
-              {text2}
-            </p>
-            <p>
-              {text3}
-            </p>
+            <p>{text2}</p>
+            <p>{text3}</p>
 
             <Image
               src={`/images/${slug}/design.png`}
@@ -70,9 +74,7 @@ export default function Project({ project }) {
               objectFit="cover"
             />
 
-            <p>
-              {text4}
-            </p>
+            <p>{text4}</p>
           </div>
         </div>
       </div>

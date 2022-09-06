@@ -1,5 +1,5 @@
 import Blog from "../../components/blogItem/Blog";
-import client from '../../sanity'
+import client from '../../sanity';
 
 export default function BlogDetailPage({ data }) {
     return <div>

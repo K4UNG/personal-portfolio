@@ -2,6 +2,7 @@ import styles from "./Blog.module.css";
 import BackButton from "../ui/BackButton";
 import { urlFor } from "../../sanity";
 import { PortableText } from "@portabletext/react";
+import Comments from "./Comments";
 
 export default function Blog({ blog }) {
   const { mainImage, title, body, publishedAt } = blog;
@@ -47,6 +48,8 @@ export default function Blog({ blog }) {
           />
         </article>
       </div>
+
+      <Comments />
     </div>
   );
 }
