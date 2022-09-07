@@ -17,15 +17,16 @@ export default function Cursor() {
     setY(y);
   }
 
-  function onMouseEnter() {
-    dispatch(animationActions.removeState());
-  }
-
-  function onMouseLeave() {
-    dispatch(animationActions.hideCursor());
-  }
 
   useEffect(() => {
+    function onMouseEnter() {
+      dispatch(animationActions.removeState());
+    }
+  
+    function onMouseLeave() {
+      dispatch(animationActions.hideCursor());
+    }
+
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseenter", onMouseEnter);
     document.addEventListener("mouseleave", onMouseLeave);
@@ -35,7 +36,7 @@ export default function Cursor() {
       document.removeEventListener("mouseenter", onMouseEnter);
       document.removeEventListener("mouseleave", onMouseLeave);
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
@@ -45,7 +46,7 @@ export default function Cursor() {
           state === "expand" && styles.expand
         } ${state === "image" && styles.image}`}
       >
-        {state === "image" && <img src={urlFor(text)} />}
+        {state === "image" && <img src={urlFor(text)} alt='cursor image' />}
         {state === "expand" && <span className={styles.text}>{text}</span>}
       </div>
     </div>

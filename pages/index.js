@@ -15,7 +15,7 @@ export default function Home() {
     return () => {
       dispatch(animationActions.removeState());
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

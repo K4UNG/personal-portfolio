@@ -76,3 +76,17 @@
         height: 400px
     }
 }
+
+@media (min-width: 1800px) {
+    .featured {
+        height: 500px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .time {
+        font-size: .95rem;
+    }
+}

@@ -12,3 +12,9 @@
 .wrapper {
     border-top: 1px solid var(--clr-dark);
 }
+
+@media (min-width: 1600px) {
+    .title {
+        font-size: 2rem;
+    }
+}

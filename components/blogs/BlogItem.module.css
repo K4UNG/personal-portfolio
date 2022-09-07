@@ -96,3 +96,14 @@
         width: 500px;
     }
 }
+
+@media (min-width: 1600px) {
+    .overview {
+        font-size: 1rem;
+        width: 600px;
+    }
+
+    .wrapper {
+        padding: 1rem 0;
+    }
+}

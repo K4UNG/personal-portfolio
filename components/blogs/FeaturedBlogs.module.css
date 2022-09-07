@@ -42,3 +42,9 @@
         width: 35px;
     }
 }
+
+@media (min-width: 1680px) {
+    .title {
+        font-size: 3rem;
+    }
+}

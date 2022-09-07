@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.image}>
-        <Image src="/images/letter.jpg" className={styles.image} height='800' width='700' />
+        <Image src="/images/letter.jpg" alt='letter box' className={styles.image} height='800' width='700' />
         <div className={styles.overlay} />
         <h2 className={styles.title}>Get in Touch <br/><ArrowTopRight /></h2>
       </div>
