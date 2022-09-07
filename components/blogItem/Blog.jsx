@@ -11,7 +11,7 @@ export default function Blog({ blog }) {
   return (
     <div>
       <div className={styles.banner}>
-        <BackButton />
+        <BackButton page='/blog' />
         <img className={styles.image} src={urlFor(mainImage)} alt={title} />
         <div className={styles.date}>
           {date.toLocaleString("en-GB", {

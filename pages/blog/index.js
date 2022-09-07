@@ -10,7 +10,7 @@ export default function BlogsPage({ blogs }) {
 
     useEffect(() => {
         return () => dispatch(animationActions.removeState())
-    }, [])
+    }, [dispatch])
 
     return <div className="blogs">
         <FeaturedBlogs blogs={blogs.filter(b => b.isFeatured)} />

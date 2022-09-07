@@ -3,14 +3,14 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../store/animationSlice";
 
-export default function BackButton() {
+export default function BackButton({page}) {
   const router = useRouter();
   const dispatch = useDispatch();
 
   return (
     <button
       className={styles.button}
-      onClick={() => router.back()}
+      onClick={() => router.replace(page)}
       onMouseEnter={() => dispatch(animationActions.hideCursor())}
       onMouseLeave={() => dispatch(animationActions.removeState())}
     >

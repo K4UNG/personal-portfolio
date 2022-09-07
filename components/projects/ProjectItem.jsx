@@ -19,7 +19,7 @@ export default function Project({ project }) {
           height="600"
           objectFit="cover"
         />
-        <BackButton />
+        <BackButton page='/' />
       </div>
       <div className={styles.content}>
         <div className={styles.head}>

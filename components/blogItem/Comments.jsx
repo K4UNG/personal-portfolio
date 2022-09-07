@@ -1,6 +1,8 @@
 import styles from "./Comments.module.css";
 import { useState, useRef } from "react";
 import CommentList from "./CommentList";
+import { useDispatch } from "react-redux";
+import { animationActions } from '../../store/animationSlice';
 
 export default function Comments({ comments, id }) {
   const [name, setName] = useState("");
@@ -9,6 +11,8 @@ export default function Comments({ comments, id }) {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState();
   const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch()
 
   async function submitHandler(e) {
     e.preventDefault();
@@ -24,7 +28,7 @@ export default function Comments({ comments, id }) {
     const res = await fetch("/api/post-comment", {
       method: "POST",
       body: JSON.stringify({
-        name,
+        name: name.trim(),
         message,
         _id: id,
       }),
@@ -33,13 +37,12 @@ export default function Comments({ comments, id }) {
       },
     });
 
-    setLoading('false')
+    setLoading("false");
 
     if (!res.ok) {
       setError("Something went wrong");
       return;
     }
-
 
     setSuccess(true);
   }
@@ -79,7 +82,12 @@ export default function Comments({ comments, id }) {
                 tabIndex={name ? 0 : -1}
               ></textarea>
               <br />
-              <button tabIndex={name ? 0 : -1} className={`${styles.button} ${loading && styles.loading}`}>
+              <button
+              onMouseEnter={e => dispatch(animationActions.hideCursor())}
+              onMouseLeave={e => dispatch(animationActions.removeState())}
+                tabIndex={name ? 0 : -1}
+                className={`${styles.button} ${loading && styles.loading}`}
+              >
                 Post
               </button>
             </div>

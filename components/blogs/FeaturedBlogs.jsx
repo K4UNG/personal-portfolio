@@ -1,37 +1,6 @@
 import styles from "./FeaturedBlogs.module.css";
 import FeaturedItem from "./FeaturedItem";
-import HomeButton from '../ui/HomeButton'
-
-const blogs = [
-  {
-    title: "some title",
-    image: "/images/keyboard.png",
-    alug: "some-title",
-    timeToRead: 13,
-    isFeatured: true,
-  },
-  {
-    title: "another title",
-    image: "/images/person.jpg",
-    alug: "some-title",
-    timeToRead: 13,
-    isFeatured: true,
-  },
-  {
-    title: "another long title",
-    image: "/images/keyboard.png",
-    alug: "some-title",
-    timeToRead: 13,
-    isFeatured: true,
-  },
-  {
-    title: "very very long one title",
-    image: "/images/person.jpg",
-    alug: "some-title",
-    timeToRead: 13,
-    isFeatured: true,
-  },
-];
+import HomeButton from "../ui/HomeButton";
 
 export default function FeaturedBlogs({ blogs }) {
   return (
@@ -41,10 +10,9 @@ export default function FeaturedBlogs({ blogs }) {
       </div>
       <h1 className={styles.title}>Featured Posts</h1>
       <div className={styles.wrapper}>
-        {blogs
-          .map((blog) => (
-            <FeaturedItem key={blog._id} blog={blog} />
-          ))}
+        {blogs.slice(0,4).map((blog) => (
+          <FeaturedItem key={blog._id} blog={blog} />
+        ))}
       </div>
     </div>
   );

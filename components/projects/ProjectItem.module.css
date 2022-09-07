@@ -90,3 +90,21 @@
         height: 300px !important;
     }
 }
+
+@media (min-width: 1700px) {
+    .body {
+        max-width: 1200px;
+    }
+
+    .body p {
+        font-size: 1.5rem;
+    }
+
+    .link {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 7rem;
+    }
+}

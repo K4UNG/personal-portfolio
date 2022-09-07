@@ -41,7 +41,12 @@
     border-radius: 20px;
     text-transform: uppercase;
     margin-top: 1rem;
-    transition: opacity 150ms ease;
+    transition: opacity 150ms ease, letter-spacing 100ms ease;
+}
+
+.button:hover,
+.button:focus {
+    letter-spacing: 3px;
 }
 
 .message {
