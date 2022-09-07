@@ -6,12 +6,21 @@ export default function Comments({ comments, id }) {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const wrapper = useRef();
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
   const [success, setSuccess] = useState();
+  const [loading, setLoading] = useState(false);
 
   async function submitHandler(e) {
     e.preventDefault();
-    setError(false);
+    if (name.trim().length === 0) {
+      setError("Name can't be empty!");
+      return;
+    } else if (message.trim().length === 0) {
+      setError("Message cant' be empty!");
+      return;
+    }
+    setError(null);
+    setLoading(true);
     const res = await fetch("/api/post-comment", {
       method: "POST",
       body: JSON.stringify({
@@ -24,10 +33,13 @@ export default function Comments({ comments, id }) {
       },
     });
 
+    setLoading('false')
+
     if (!res.ok) {
-      setError(true);
-      return
+      setError("Something went wrong");
+      return;
     }
+
 
     setSuccess(true);
   }
@@ -42,7 +54,7 @@ export default function Comments({ comments, id }) {
         </div>
       ) : (
         <form className={styles.form} onSubmit={submitHandler}>
-          {error && <div className={styles.error}>Something went wrong!</div>}
+          {error && <div className={styles.error}>{error}</div>}
           <label htmlFor="name">Comment as</label>
           <br />
           <input
@@ -67,7 +79,7 @@ export default function Comments({ comments, id }) {
                 tabIndex={name ? 0 : -1}
               ></textarea>
               <br />
-              <button tabIndex={name ? 0 : -1} className={styles.button}>
+              <button tabIndex={name ? 0 : -1} className={`${styles.button} ${loading && styles.loading}`}>
                 Post
               </button>
             </div>

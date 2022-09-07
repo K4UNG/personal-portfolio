@@ -47,3 +47,31 @@
         font-size: 1.1rem;
     }
 }
+
+@media (min-width: 1700px) {
+    .list {
+        max-width: 1400px;
+    }
+
+    .message {
+        font-size: 1.35rem;
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .empty {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .message {
+        font-size: 1.5rem;
+    }
+}

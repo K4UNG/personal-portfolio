@@ -73,3 +73,27 @@
         font-size: 1.1rem;
     }
 }
+
+@media (min-width: 1700px) {
+    .body {
+        max-width: 1400px;
+    }
+
+    .content img {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .body {
+        max-width: 1550px;
+    }
+
+    .body p {
+        font-size: 1.35rem;
+    }
+
+    .content img {
+        height: 450px;
+    }
+}
