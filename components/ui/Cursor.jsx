@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { animationActions } from "../../store/animationSlice";
 import { urlFor } from "../../sanity";
+import Image from "next/image";
 
 export default function Cursor() {
   const [x, setX] = useState(-100);
@@ -17,12 +18,11 @@ export default function Cursor() {
     setY(y);
   }
 
-
   useEffect(() => {
     function onMouseEnter() {
       dispatch(animationActions.removeState());
     }
-  
+
     function onMouseLeave() {
       dispatch(animationActions.hideCursor());
     }
@@ -46,7 +46,16 @@ export default function Cursor() {
           state === "expand" && styles.expand
         } ${state === "image" && styles.image}`}
       >
-        {state === "image" && <img src={urlFor(text)} alt='cursor image' />}
+        {state === "image" && (
+          <Image
+            src={urlFor(text).url()}
+            alt="cursor image"
+            width="200"
+            height="100"
+            objectFit="cover"
+            layout="responsive"
+          />
+        )}
         {state === "expand" && <span className={styles.text}>{text}</span>}
       </div>
     </div>

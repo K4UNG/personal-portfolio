@@ -20,7 +20,7 @@ export default function Comments({ comments, id }) {
       setError("Name can't be empty!");
       return;
     } else if (message.trim().length === 0) {
-      setError("Message cant' be empty!");
+      setError("Message can't be empty!");
       return;
     }
     setError(null);
@@ -53,7 +53,7 @@ export default function Comments({ comments, id }) {
       {success ? (
         <div className={styles.success}>
           <h3>Submitted!</h3>
-          <p>Your comment will appear once it's been approved.</p>
+          <p>Your comment will appear once it&apos;s been approved.</p>
         </div>
       ) : (
         <form className={styles.form} onSubmit={submitHandler}>
@@ -83,8 +83,8 @@ export default function Comments({ comments, id }) {
               ></textarea>
               <br />
               <button
-              onMouseEnter={e => dispatch(animationActions.hideCursor())}
-              onMouseLeave={e => dispatch(animationActions.removeState())}
+              onMouseEnter={() => dispatch(animationActions.hideCursor())}
+              onMouseLeave={() => dispatch(animationActions.removeState())}
                 tabIndex={name ? 0 : -1}
                 className={`${styles.button} ${loading && styles.loading}`}
               >

@@ -34,10 +34,9 @@
     mix-blend-mode: normal;
 }
 
-.cursor img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+.cursor span:not(.text) {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .text {

@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import { useEffect } from 'react'
 
-export const OPACITY_EXIT_DURATION = 1
+export const OPACITY_EXIT_DURATION = .7
 
 const routeChange = () => {
   const tempFix = () => {
