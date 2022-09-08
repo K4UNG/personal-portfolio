@@ -13,6 +13,7 @@ export default function BackButton({page}) {
       onClick={() => router.replace(page)}
       onMouseEnter={() => dispatch(animationActions.hideCursor())}
       onMouseLeave={() => dispatch(animationActions.removeState())}
+      aria-label='back button'
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

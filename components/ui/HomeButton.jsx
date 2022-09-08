@@ -10,6 +10,7 @@ export default function HomeButton() {
       <a
         onMouseEnter={() => dispatch(animationActions.hideCursor())}
         onMouseLeave={() => dispatch(animationActions.removeState())}
+        aria-label='home button'
       >
         <svg
           width="88"
