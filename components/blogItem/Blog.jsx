@@ -4,6 +4,7 @@ import { urlFor } from "../../sanity";
 import { PortableText } from "@portabletext/react";
 import Comments from "./Comments";
 import Image from "next/image";
+import { motion, useScroll } from "framer-motion";
 
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
@@ -20,9 +21,14 @@ SyntaxHighlighter.registerLanguage("css", css);
 export default function Blog({ blog }) {
   const { mainImage, title, body, publishedAt, comments, _id } = blog;
   const date = new Date(publishedAt);
+  const { scrollYProgress } = useScroll();
 
   return (
     <div>
+      <motion.div
+        className={styles.progress}
+        style={{ scaleX: scrollYProgress }}
+      />
       <div className={styles.banner}>
         <Image
           className={styles.image}
