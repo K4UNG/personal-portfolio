@@ -48,7 +48,7 @@ export default function About() {
   const whileInView = {
     opacity: 1,
     transition: {
-      duration: .7,
+      duration: 0.7,
     },
   };
 
@@ -60,7 +60,11 @@ export default function About() {
         </motion.h2>
       </div>
       <div className={styles.container}>
-        <div className={styles.image}>
+        <div
+          className={styles.image}
+          onMouseEnter={() => dispatch(animationActions.message())}
+          onMouseLeave={() => dispatch(animationActions.removeState())}
+        >
           <Image
             src="/images/person.jpg"
             alt="Kaung Zin Hein"

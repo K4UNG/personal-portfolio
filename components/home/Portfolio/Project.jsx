@@ -23,6 +23,7 @@ export default function Project({ project }) {
           width="800"
           height="100"
           loading="eager"
+          priority={true}
         />
         <div className={styles.info}>
           <h4 className={styles.title}>{title}</h4>

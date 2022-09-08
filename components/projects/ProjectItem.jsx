@@ -59,7 +59,6 @@ export default function Project({ project }) {
               height="400"
               layout="responsive"
               objectFit="cover"
-              style={{ height: "auto", width: "100%" }}
             />
 
             <p>{text2}</p>

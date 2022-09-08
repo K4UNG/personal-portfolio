@@ -5,9 +5,11 @@ import { Provider } from "react-redux";
 import store from "../store";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePageTransitionFix } from '../hooks/use-page-transition-fix'
+import { useRouter } from "next/router";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   const [isTouch, setIsTouch] = useState();
+  const router = useRouter()
   usePageTransitionFix()
 
   useEffect(() => {

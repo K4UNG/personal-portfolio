@@ -34,6 +34,15 @@
     mix-blend-mode: normal;
 }
 
+.cursor.message {
+    width: 150px;
+    height: 150px;
+    mix-blend-mode: normal;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
 .cursor span:not(.text) {
     width: 100% !important;
     height: 100% !important;
@@ -43,6 +52,7 @@
     transform: scale(0);
     animation: grow 80ms ease forwards;
     font-family: 'Space Grotesk', sans-serif;
+    width: 90%;
 }
 
 @keyframes grow {

@@ -5,7 +5,8 @@ const animationSlice = createSlice({
     initialState: {
         state: null,
         number: '01',
-        text: ''
+        text: '',
+        index: -1
     },
     reducers: {
         removeState(state) {
@@ -25,6 +26,13 @@ const animationSlice = createSlice({
         image(state, payload) {
             state.state = 'image'
             state.text = payload.payload
+        },
+        message(state) {
+            state.state = 'message'
+            state.index++
+        },
+        resetIndex(state) {
+            state.index = -1
         }
     }
 })
