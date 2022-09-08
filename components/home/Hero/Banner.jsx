@@ -120,6 +120,7 @@ export default function Banner() {
                   variants={linkVariant}
                   href="#home"
                   alt="scroll to home"
+                  tabIndex='1'
                 >
                   Home
                 </motion.a>
@@ -129,6 +130,7 @@ export default function Banner() {
                   variants={linkVariant}
                   href="#portfolio"
                   alt="scroll to protfolio"
+                  tabIndex='2'
                 >
                   Portfolio
                 </motion.a>
@@ -138,6 +140,7 @@ export default function Banner() {
                   variants={linkVariant}
                   href="#about"
                   alt="scroll to about"
+                  tabIndex='3'
                 >
                   About
                 </motion.a>
@@ -147,6 +150,7 @@ export default function Banner() {
                   variants={linkVariant}
                   href="#contact"
                   alt="scroll to contact"
+                  tabIndex='4'
                 >
                   Contact
                 </motion.a>
@@ -161,7 +165,7 @@ export default function Banner() {
         className={styles.work}
       >
         Available for work at{" "}
-        <a href="mailto:kgzinhein.my@gmail.com" alt="mail link">
+        <a href="mailto:kgzinhein.my@gmail.com" alt="mail link" tabIndex='5'>
           kgzinhein.my@gmail.com
         </a>
         .
@@ -206,7 +210,8 @@ export default function Banner() {
               onMouseEnter={(e) => onMouseEnter(e, buttonOneRef)}
               onMouseLeave={() => onMouseLeave(spanOneRef)}
               ref={buttonOneRef}
-            >
+              tabIndex='6'
+              >
               Go to Projects <ArrowRight />
               {pos && pos.ref === buttonOneRef && (
                 <span
@@ -230,6 +235,7 @@ export default function Banner() {
                 onMouseEnter={(e) => onMouseEnter(e, buttonTwoRef)}
                 onMouseLeave={() => onMouseLeave(spanTwoRef)}
                 ref={buttonTwoRef}
+                tabIndex='7'
               >
                 Blog <ArrowRight />
                 {pos && pos.ref === buttonTwoRef && (
