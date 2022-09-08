@@ -6,8 +6,9 @@ import { useEffect } from "react";
 import { animationActions } from "../../store/animationSlice";
 import { motion } from "framer-motion";
 
-export default function BlogsPage({ blogs }) {
+export default function BlogsPage({ data }) {
   const dispatch = useDispatch();
+  const blogs = data || []
 
   useEffect(() => {
     return () => dispatch(animationActions.removeState());
@@ -29,7 +30,7 @@ export async function getStaticProps() {
   const data = await client.fetch("*[_type=='post'] | order(publishedAt desc){title, _id, mainImage, overview, isFeatured, slug, timeToRead}");
   return {
     props: {
-      blogs: data,
+      data,
     },
     revalidate: 3600,
   };

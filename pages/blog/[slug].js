@@ -29,6 +29,12 @@ export async function getStaticProps(context) {
     `*[_type=='post' && slug.current=='${slug}']{mainImage,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true]}`
   );
 
+  if (!data) {
+    return {
+      notFound: true
+    }
+  }
+
   return {
     props: {
       data,
