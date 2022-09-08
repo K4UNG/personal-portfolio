@@ -74,7 +74,7 @@
 
     .wrapper>a:nth-child(3):hover+a+.cover>div>.inner,
     .wrapper>a:nth-child(3):focus+a+.cover>div>.inner {
-        background-color: hsl(0, 0%, 25%);
+        background-color: hsl(0, 0%, 20%);
     }
 
     .wrapper>a:nth-child(3):hover+a+.cover+.cover>div>.inner,
