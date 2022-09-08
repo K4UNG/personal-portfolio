@@ -6,6 +6,7 @@ import store from "../store";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePageTransitionFix } from '../hooks/use-page-transition-fix'
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const [isTouch, setIsTouch] = useState();
@@ -26,6 +27,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
+      <Head>
+        <title>Kaung Zin Hein - Frontend Developer</title>
+      </Head>
       <AnimatePresence mode="wait">
         <motion.div key={router.route} exit={{opacity: 0}}>
           <Component {...pageProps} /></motion.div>

@@ -25,10 +25,12 @@ export default function Blog({ blog }) {
 
   return (
     <div>
-      <motion.div
-        className={styles.progress}
-        style={{ scaleX: scrollYProgress }}
-      />
+      <div className={styles.wrapper}>
+        <motion.div
+          className={styles.progress}
+          style={{ scaleX: scrollYProgress }}
+        />
+      </div>
       <div className={styles.banner}>
         <Image
           className={styles.image}
