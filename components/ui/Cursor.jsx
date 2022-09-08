@@ -56,7 +56,7 @@ export default function Cursor() {
 
       router.events.off('routeChangeStart', routeChangeHandler)
     };
-  }, [dispatch]);
+  }, [dispatch, router.events, routeChangeHandler]);
 
   return (
     <div>
