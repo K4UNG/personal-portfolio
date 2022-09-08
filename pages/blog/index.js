@@ -26,7 +26,7 @@ export default function BlogsPage({ blogs }) {
 }
 
 export async function getStaticProps() {
-  const data = await client.fetch("*[_type=='post'] | order(publishedAt desc)");
+  const data = await client.fetch("*[_type=='post'] | order(publishedAt desc){title, _id, mainImage, overview, isFeatured, slug, timeToRead}");
   return {
     props: {
       blogs: data,
