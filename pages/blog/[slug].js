@@ -1,12 +1,28 @@
 import Blog from "../../components/blogItem/Blog";
-import client from "../../sanity";
+import client, { urlFor } from "../../sanity";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
-export default function BlogDetailPage({ data }) {
+export default function BlogDetailPage({ blog }) {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <Blog blog={data[0]} />
-    </motion.div>
+    <>
+      <Head>
+        <title>{blog[0].title + " | Kaung Zin Hein"}</title>
+        <meta name="description" content={blog[0].overview} />
+        <meta
+          property="og:title"
+          content={blog[0].title + " | Kaung Zin Hein"}
+        />
+        <meta property="og:description" content={blog[0].overview} />
+        <meta
+          property="og:image"
+          content={urlFor(blog[0].mainImage).url()}
+        />
+      </Head>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <Blog blog={blog[0]} />
+      </motion.div>
+    </>
   );
 }
 
@@ -26,18 +42,18 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const data = await client.fetch(
-    `*[_type=='post' && slug.current=='${slug}']{mainImage,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true]}`
+    `*[_type=='post' && slug.current=='${slug}']{mainImage,overview,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true]}`
   );
 
   if (!data) {
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   }
 
   return {
     props: {
-      data,
+      blog: data,
     },
     revalidate: 1800,
   };

@@ -7,6 +7,7 @@ import Contact from "../components/home/Contact/Contact";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../store/animationSlice";
+import Head from "next/head";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,6 +20,22 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Home | Kaung Zin Hein</title>
+        <meta
+          name="description"
+          content="An aspiring juinor frontend developer, UI/UX designer from Myanmar."
+        />
+        <meta
+          property="og:title"
+          content="Kaung Zin Hein - Frontend Developer"
+        />
+        <meta
+          property="og:description"
+          content="An aspiring juinor frontend developer, UI/UX designer from Myanmar."
+        />
+        {/* <meta property="og:image" content="" /> */}
+      </Head>
       <Header />
       <main>
         <Banner />
