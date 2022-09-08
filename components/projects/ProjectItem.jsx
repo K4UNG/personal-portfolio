@@ -14,7 +14,7 @@ export default function Project({ project }) {
       <div className={styles.banner}>
         <Image
           src={`/images/${slug}/banner.png`}
-          alt="keyboard"
+          alt={title+" banner"}
           width="1200"
           height="600"
           objectFit="cover"
@@ -54,7 +54,7 @@ export default function Project({ project }) {
 
             <Image
               src={`/images/${slug}/preview.png`}
-              alt="keyboard"
+              alt={title + ' preview'}
               width="900"
               height="400"
               layout="responsive"
@@ -67,7 +67,7 @@ export default function Project({ project }) {
 
             <Image
               src={`/images/${slug}/design.png`}
-              alt="keyboard"
+              alt={title + ' design'}
               width="900"
               height="400"
               layout="responsive"

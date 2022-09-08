@@ -13,7 +13,12 @@
 }
 
 .title div {
-    width: max-content
+    width: max-content;
+    overflow: hidden;
+}
+
+.title span {
+    display: inline-block;
 }
 
 .list {
@@ -144,6 +149,11 @@
     .list li {
         margin: 5px 0;
         font-size: 1.1rem;
+        overflow: hidden;
+    }
+
+    .list li a {
+        display: inline-block;
     }
 
     .list li:first-child {
@@ -188,6 +198,15 @@
         text-transform: uppercase;
         font-weight: 700;
         max-width: 250px;
+    }
+
+    .strong>span {
+        display: block;
+        overflow: hidden;
+    }
+
+    .strong>span span {
+        display: inline-block;
     }
 }
 

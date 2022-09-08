@@ -24,7 +24,7 @@
     display: grid;
     place-items: center;
     text-align: center;
-    border: 1px solid var(--clr-dark);
+    /* border: 1px solid var(--clr-dark); */
 }
 
 .cursor.image {

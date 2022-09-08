@@ -3,6 +3,7 @@ import BackButton from "../ui/BackButton";
 import { urlFor } from "../../sanity";
 import { PortableText } from "@portabletext/react";
 import Comments from "./Comments";
+import Image from 'next/image';
 
 export default function Blog({ blog }) {
   const { mainImage, title, body, publishedAt, comments, _id } = blog;
@@ -29,7 +30,15 @@ export default function Blog({ blog }) {
             components={{
               types: {
                 image: ({ value }) => {
-                  return <img src={urlFor(value)} alt={title} />;
+                  // return <img src={urlFor(value)} alt={title} />;
+                  const url = urlFor(value).url()
+                  return <Image
+                  src={url}
+                  alt={title}
+                  width="1200"
+                  height="600"
+                  objectFit="cover"
+                />
                 },
                 callToAction: ({ value }) => (
                   <a href={value.url}>{value.text}</a>

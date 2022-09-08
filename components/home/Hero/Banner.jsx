@@ -4,6 +4,7 @@ import ArrowRight from "../../ui/ArrowRight";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { animationActions } from "../../../store/animationSlice";
+import { motion } from "framer-motion";
 
 export default function Banner() {
   const buttonOneRef = useRef();
@@ -12,6 +13,61 @@ export default function Banner() {
   const spanTwoRef = useRef();
   const [pos, setPos] = useState(null);
   const dispatch = useDispatch();
+
+  const parentVariant = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const fadeParentVariant = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const wordVariant = {
+    initial: {
+      y: 200,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.65, 0.05, 0.36, 1],
+      },
+    },
+  };
+
+  const linkVariant = {
+    initial: {
+      y: 20,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 0.7,
+      },
+    },
+  };
+
+  const fadeVariant = {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   function onMouseEnter(e, ref) {
     const { pageX, pageY } = e;
@@ -32,59 +88,116 @@ export default function Banner() {
   return (
     <section id="home" className={styles.banner}>
       <div className={styles.banner__top}>
-        <h1 className={styles.title}>
-          <div className={styles.title__first}>Exceptional</div>
-          <div className={styles.title__second}>Web</div>
-          <div className={styles.title__third}>Experiences</div>
-        </h1>
+        <motion.h1
+          className={styles.title}
+          variants={parentVariant}
+          animate="animate"
+          initial="initial"
+        >
+          <motion.div className={styles.title__first}>
+            <motion.span variants={wordVariant}>Exceptional</motion.span>
+          </motion.div>
+          <motion.div className={styles.title__second}>
+            <motion.span variants={wordVariant}>Web</motion.span>
+          </motion.div>
+          <motion.div className={styles.title__third}>
+            <motion.span variants={wordVariant}>Experiences</motion.span>
+          </motion.div>
+        </motion.h1>
 
         <div className={styles.blank}>
-          <nav className={styles.list}>
+          <motion.nav
+            className={styles.list}
+            variants={parentVariant}
+            animate="animate"
+            initial="initial"
+          >
             <ul>
               <li>
-                <a href="#home" alt="scroll to home">
+                <motion.a
+                  variants={linkVariant}
+                  href="#home"
+                  alt="scroll to home"
+                >
                   Home
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a href="#portfolio" alt="scroll to protfolio">
+                <motion.a
+                  variants={linkVariant}
+                  href="#portfolio"
+                  alt="scroll to protfolio"
+                >
                   Portfolio
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a href="#about" alt="scroll to about">
+                <motion.a
+                  variants={linkVariant}
+                  href="#about"
+                  alt="scroll to about"
+                >
                   About
-                </a>
+                </motion.a>
               </li>
               <li>
-                <a href="#contact" alt="scroll to contact">
+                <motion.a
+                  variants={linkVariant}
+                  href="#contact"
+                  alt="scroll to contact"
+                >
                   Contact
-                </a>
+                </motion.a>
               </li>
             </ul>
-          </nav>
+          </motion.nav>
         </div>
       </div>
-      <div className={styles.work}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1 } }}
+        className={styles.work}
+      >
         Available for work at{" "}
         <a href="mailto:kgzinhein.my@gmail.com" alt="mail link">
           kgzinhein.my@gmail.com
         </a>
         .
-      </div>
+      </motion.div>
 
       <div className={styles.banner__bottom}>
-        <p className={styles.strong}>
-          An individual with passion for creative development
-        </p>
-        <div className={styles.banner__text}>
+        <motion.p
+          className={styles.strong}
+          variants={parentVariant}
+          animate="animate"
+          initial="initial"
+        >
+          <span>
+            <motion.span variants={linkVariant}>An individual with</motion.span>
+          </span>{" "}
+          <span>
+            <motion.span variants={linkVariant}>
+              passion for creative
+            </motion.span>
+          </span>{" "}
+          <span>
+            <motion.span variants={linkVariant}>development</motion.span>
+          </span>
+        </motion.p>
+        <motion.div
+          variants={fadeParentVariant}
+          animate="animate"
+          initial="initial"
+          className={styles.banner__text}
+        >
           <div className={styles.text__container}>
-            <p className={styles.text}>
+            <motion.p variants={fadeVariant} className={styles.text}>
               A passionate self-taght developer from a third-world country,
               looking for opportunities to deliver best possible services and
               values.
-            </p>
-            <a
+            </motion.p>
+            <motion.a
+              variants={fadeVariant}
               className={styles.button}
               href="#portfolio"
               alt="portfolio section"
@@ -101,15 +214,16 @@ export default function Banner() {
                   className={styles.button__overlay}
                 />
               )}
-            </a>
+            </motion.a>
           </div>
           <div className={styles.text__container}>
-            <p className={styles.text}>
+            <motion.p variants={fadeVariant} className={styles.text}>
               Fancy some web-related knowledge? Or simply just interested in my
               personal life? Check out my blog where I post all kinds of things.
-            </p>
+            </motion.p>
             <Link href="/blog" alt="blog">
-              <a
+              <motion.a
+                variants={fadeVariant}
                 className={styles.button}
                 onMouseEnter={(e) => onMouseEnter(e, buttonTwoRef)}
                 onMouseLeave={() => onMouseLeave(spanTwoRef)}
@@ -124,10 +238,10 @@ export default function Banner() {
                     className={styles.button__overlay}
                   />
                 )}
-              </a>
+              </motion.a>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

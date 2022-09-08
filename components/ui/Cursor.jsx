@@ -5,8 +5,8 @@ import { animationActions } from "../../store/animationSlice";
 import { urlFor } from "../../sanity";
 
 export default function Cursor() {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  const [x, setX] = useState(-100);
+  const [y, setY] = useState(-100);
   const state = useSelector((state) => state.state);
   const text = useSelector((state) => state.text);
   const dispatch = useDispatch();

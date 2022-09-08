@@ -15,6 +15,11 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: .9rem;
+    overflow: hidden;
+}
+
+.tags span {
+    display: inline-block;
 }
 
 @media (min-width: 620px) {

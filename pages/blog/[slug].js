@@ -1,11 +1,12 @@
 import Blog from "../../components/blogItem/Blog";
 import client from "../../sanity";
+import { motion } from "framer-motion";
 
 export default function BlogDetailPage({ data }) {
   return (
-    <div>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Blog blog={data[0]} />
-    </div>
+    </motion.div>
   );
 }
 
