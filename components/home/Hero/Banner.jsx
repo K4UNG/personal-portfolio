@@ -17,6 +17,7 @@ export default function Banner() {
   const parentVariant = {
     animate: {
       transition: {
+        delayChildren: .2,
         staggerChildren: 0.1,
       },
     },
@@ -25,6 +26,7 @@ export default function Banner() {
   const fadeParentVariant = {
     animate: {
       transition: {
+        delayChildren: .3,
         staggerChildren: 0.2,
       },
     },

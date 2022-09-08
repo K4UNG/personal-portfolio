@@ -12,6 +12,7 @@
 @media (min-width: 980px) {
     .title {
         font-weight: 900;
+        margin: 3rem 0;
     }
 }
 

@@ -31,6 +31,27 @@ export default function About() {
     });
   }
 
+  const parentVariant = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const childVariant = {
+    initial: {
+      opacity: 0,
+    },
+  };
+
+  const whileInView = {
+    opacity: 1,
+    transition: {
+      duration: .7,
+    },
+  };
+
   return (
     <section id="about" className={styles.about}>
       <div ref={title}>
@@ -47,23 +68,44 @@ export default function About() {
             height="900"
           />
         </div>
-        <div className={styles.content}>
-          <h3 className={styles.name}>I&apos;m Kaung Zin Hein</h3>
-          <p className={styles.text}>
+        <motion.div
+          variants={parentVariant}
+          initial="initial"
+          className={styles.content}
+        >
+          <motion.h3
+            whileInView={whileInView}
+            viewport={{ once: true }}
+            variants={childVariant}
+            className={styles.name}
+          >
+            I&apos;m Kaung Zin Hein
+          </motion.h3>
+          <motion.p
+            whileInView={whileInView}
+            viewport={{ once: true }}
+            variants={childVariant}
+            className={styles.text}
+          >
             I&apos;m a self-taught junior{" "}
             <span className={styles.strong}>frontend</span> developer from{" "}
             <span className={styles.strong}>Myanmar</span>. I&apos;m currently
             expanding my knowledge into the world or backend and databases. I
             also have quite a lot of interest in{" "}
             <span className={styles.strong}>UI/UX</span> design.
-          </p>
-          <p className={styles.text}>
+          </motion.p>
+          <motion.p
+            whileInView={whileInView}
+            viewport={{ once: true }}
+            variants={childVariant}
+            className={styles.text}
+          >
             When I&apos;m not coding, you can probably find me playing{" "}
-            <span className={styles.strong}>Rubik&apos;s cube</span>, listening to
-            music or playing games. I love listening to{" "}
+            <span className={styles.strong}>Rubik&apos;s cube</span>, listening
+            to music or playing games. I love listening to{" "}
             <span className={styles.strong}>Soft pop, kpop</span> and piano. I
             also love watching Sci-fi, mystery movies.
-          </p>
+          </motion.p>
 
           <a
             className={styles.button}
@@ -88,7 +130,7 @@ export default function About() {
               />
             )}
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

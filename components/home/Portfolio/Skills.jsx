@@ -1,34 +1,135 @@
 import styles from "./Skills.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Skills() {
+  const childVaraint = {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+  };
+
+  const whileInView = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      once: true,
+    },
+  };
+
   return (
     <section id="languages" className={styles.skills}>
-      <div className={styles.langs}>
-        <span className={styles.lang}>HTML</span>
-        <span className={styles.lang + " " + styles.underline}>JAVASCRIPT</span>
-        <span className={styles.lang}>CSS</span>
+      <motion.div className={styles.langs} initial="initial">
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          HTML
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang + " " + styles.underline}
+        >
+          JAVASCRIPT
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          CSS
+        </motion.span>
 
         <br className={styles.mobile} />
 
-        <span className={styles.lang + " " + styles.underline}>REACT</span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang + " " + styles.underline}
+        >
+          REACT
+        </motion.span>
         <br className={styles.desktop} />
-        <span className={styles.lang}>SCSS</span>
-        <span className={styles.lang + " " + styles.underline}>TYPESCRIPT</span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          SCSS
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang + " " + styles.underline}
+        >
+          TYPESCRIPT
+        </motion.span>
 
         <br className={styles.mobile} />
 
-        <span className={styles.lang}>NEXTJS</span>
-        <span className={styles.lang + " " + styles.underline}>PYTHON</span>
-        <br className={styles.desktop}/>
-        <span className={styles.lang}>DJANGO</span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          NEXTJS
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang + " " + styles.underline}
+        >
+          PYTHON
+        </motion.span>
+        <br className={styles.desktop} />
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          DJANGO
+        </motion.span>
 
         <br className={styles.mobile} />
 
-        <span className={styles.lang}>NODEJS</span>
-        <span className={styles.lang}>GIT</span>
-        <span className={styles.lang}>FIGMA</span>
-      </div>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          GIT
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          FIGMA
+        </motion.span>
+        <motion.span
+          variants={childVaraint}
+          whileInView={whileInView}
+          viewport={{ once: true }}
+          className={styles.lang}
+        >
+          PHOTOSHOP
+        </motion.span>
+      </motion.div>
 
       <div className={styles.banner}>
         <Image
