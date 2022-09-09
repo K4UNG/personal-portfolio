@@ -141,7 +141,7 @@
     }
 
     .project:hover span,
-    .project:focus span {
+    .project:focus-visible span {
         opacity: .9 !important;
         width: 100% !important;
         height: 100% !important;
@@ -150,7 +150,7 @@
     }
 
     .project:hover .desktop,
-    .project:focus .desktop {
+    .project:focus-visible .desktop {
         mix-blend-mode: difference;
         color: white;
     }

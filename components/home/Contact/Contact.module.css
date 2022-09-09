@@ -80,13 +80,13 @@
 }
 
 .error {
-    color: #ca0000;
+    color: var(--clr-red-error);
     font-size: .9rem;
     margin-top: 1rem;
 }
 
 .success {
-    color: #008000;
+    color: var(--clr-green-success);
     font-size: .9rem;
     margin-top: 1rem;
 }

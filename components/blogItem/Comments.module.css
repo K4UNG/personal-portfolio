@@ -79,7 +79,7 @@
 
 .error {
     font-size: .9rem;
-    color: rgb(202, 0, 0);
+    color: var(--clr-red-error);
 }
 
 .button.loading {

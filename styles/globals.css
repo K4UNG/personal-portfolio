@@ -32,6 +32,8 @@ a {
   --clr-dark-30: rgba(30, 30, 30, 0.3);
   --clr-dark-50: rgba(30, 30, 30, 0.5);
   --clr-dark-70: rgba(30, 30, 30, 0.7);
+  --clr-red-error: #ca0000;
+  --clr-green-success: #008000;
 
   --padding: .75rem;
   --h2: 10vw;
