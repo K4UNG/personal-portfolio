@@ -60,18 +60,35 @@
     text-transform: uppercase;
     border-radius: 15px;
     margin-top: 1rem;
-    transition: letter-spacing 150ms ease;
+    transition: letter-spacing 150ms ease, opacity 150ms ease;
 }
 
 .button:hover,
-.button:focus {
+.button:focus-visible {
     letter-spacing: 2px;
+}
+
+.button.loading {
+    opacity: .4;
+    pointer-events: none;
 }
 
 .control label.focus {
     font-size: .8rem;
     left: .3rem;
     bottom: calc(100% - 2rem)
+}
+
+.error {
+    color: #ca0000;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+
+.success {
+    color: #008000;
+    font-size: .9rem;
+    margin-top: 1rem;
 }
 
 @media (min-width: 680px) {
