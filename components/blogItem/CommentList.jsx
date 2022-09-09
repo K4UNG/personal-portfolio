@@ -1,10 +1,18 @@
 import styles from "./CommentList.module.css";
+import client from "../../sanity";
+import { useEffect, useState } from "react";
 
-export default function CommentList({ comments }) {
+export default function CommentList({ data, id }) {
+  const [comments, setComments] = useState(data)
+  useEffect(() => {
+    client.fetch(`*[_type=='post' && _id=='${id}']{'comments':*[_type=='comment'&&post._ref==^._id&&approved==true] | order(_createdAt desc)}`)
+    .then(res => setComments(res[0].comments))
+  }, [id])
+
   return (
     <ul className={styles.list}>
       {comments.map((comment) => {
-        const date = new Date(comment._updatedAt);
+        const date = new Date(comment._createdAt);
         return (
           <li className={styles.comment} key={Math.random()}>
             <p className={styles.message}>{comment.message}</p>

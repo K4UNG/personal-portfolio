@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   const data = await client.fetch(
-    `*[_type=='post' && slug.current=='${slug}']{mainImage,overview,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true]}`
+    `*[_type=='post' && slug.current=='${slug}']{mainImage,overview,title,_id,body,publishedAt,'comments':*[_type=='comment'&&post._ref==^._id&&approved==true] | order(_createdAt desc)}`
   );
 
   if (!data) {

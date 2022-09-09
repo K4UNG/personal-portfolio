@@ -13,20 +13,16 @@ export default function Cursor() {
   const text = useSelector((state) => state.text);
   const index = useSelector((state) => state.index);
   const dispatch = useDispatch();
-  const router = useRouter()
+  const router = useRouter();
 
   const messages = [
     "Handsome? Me? Oh Thank you!",
-    "Stop! You're making me blush",
+    "Oh stop! You're making me blush",
     "Yeah Yeah, I get that a lot",
     "Why you keep hovering over me la?",
     "Again??",
     "I can do this all day 💪",
   ];
-
-  function routeChangeHandler() {
-    dispatch(animationActions.resetIndex())
-  }
 
   function onMouseMove(event) {
     const { clientX: x, clientY: y } = event;
@@ -35,6 +31,10 @@ export default function Cursor() {
   }
 
   useEffect(() => {
+    function routeChangeHandler() {
+      dispatch(animationActions.resetIndex());
+    }
+
     function onMouseEnter() {
       dispatch(animationActions.removeState());
     }
@@ -43,7 +43,7 @@ export default function Cursor() {
       dispatch(animationActions.hideCursor());
     }
 
-    router.events.on('routeChangeStart', routeChangeHandler)
+    router.events.on("routeChangeStart", routeChangeHandler);
 
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseenter", onMouseEnter);
@@ -54,9 +54,9 @@ export default function Cursor() {
       document.removeEventListener("mouseenter", onMouseEnter);
       document.removeEventListener("mouseleave", onMouseLeave);
 
-      router.events.off('routeChangeStart', routeChangeHandler)
+      router.events.off("routeChangeStart", routeChangeHandler);
     };
-  }, [dispatch, router.events, routeChangeHandler]);
+  }, [dispatch, router.events]);
 
   return (
     <div>

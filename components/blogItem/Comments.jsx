@@ -95,7 +95,7 @@ export default function Comments({ comments, id }) {
         </form>
       )}
 
-      <CommentList comments={comments} />
+      <CommentList data={comments} id={id} />
     </div>
   );
 }
