@@ -56,7 +56,7 @@ export default function Project({ project }) {
               src={`/images/${slug}/preview.png`}
               alt={title + ' preview'}
               width="900"
-              height="400"
+              height="450"
               layout="responsive"
               objectFit="cover"
             />

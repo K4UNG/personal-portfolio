@@ -19,7 +19,7 @@
     "slug": "khanner-blog",
     "text1": "Khanner Blog is a blog site I made for one of my friends, using Django. It's also the first project I collaborated with someone, another friend of mine.",
     "text2": "I was taking CS50 Web course at the time and one of the lectures was about Django. I watched another course on Django from YouTube to finish the asignment. It was more than enough just for a small project so I offered my friend a blog site.",
-    "text3": "The design was very basic. It has featured posts accessible from both home and blogs page, latest posts section, all blogs page with pagination, categories section and login signup forms. I kept it all fairly simple.",
+    "text3": "The design was very basic. It has featured posts accessible from both home and blogs page. It also has latest posts section, all blogs page with pagination, categories section and login signup forms. I kept it all fairly simple.",
     "live": "https://khanner-blog.herokuapp.com",
     "repo": ""
   },
@@ -43,7 +43,7 @@
     "slug": "scheduler-app",
     "text1": "This is a scheduler app I built to help me schedule my daily studies easily.",
     "text2": "I used to always draw a clock on a piece of paper and mark different hour portions with what I want to do for that time. So I thought why not make an app out of it and here it is.",
-    "text3": "I kept the design super simple. The main focus of this project was making the clock functionable. There're two clocks representing the early half(1-12AM) and another half(1-12PM) each respectively. There're three different mode you can switch to - Inspect lets you inspect the task details, Select lets you select a task and assign it to a part of the clock, and finally Delete lets you delete the tasks on the clock, in the tasks list or even the whole schedule.",
+    "text3": "I kept the design super simple. The main focus of this project was making the clock functionable. There're two clocks representing the early half(1-12AM) and another half(1-12PM) of the day respectively. There're three different modes you can switch to - Inspect lets you inspect the task details, Select lets you select a task and assign it to a part of the clock, and finally Delete lets you delete the tasks on the clock, in the tasks list or even the whole schedule.",
     "live": "https://scheduler-k4ung.netlify.app",
     "repo": "https://github.com/K4UNG/Scheduler-app"
   }
