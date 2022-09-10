@@ -91,6 +91,9 @@ export default function Blog({ blog }) {
                     </a>
                   );
                 },
+                code({ text }) {
+                  return <span className={styles.code}>{text}</span>
+                }
               },
             }}
           />

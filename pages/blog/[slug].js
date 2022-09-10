@@ -7,11 +7,11 @@ export default function BlogDetailPage({ blog }) {
   return (
     <>
       <Head>
-        <title>{blog[0].title + " | Kaung Zin Hein"}</title>
+        <title>{blog[0].title}</title>
         <meta name="description" content={blog[0].overview} />
         <meta
           property="og:title"
-          content={blog[0].title + " | Kaung Zin Hein"}
+          content={blog[0].title}
         />
         <meta property="og:description" content={blog[0].overview} />
         <meta

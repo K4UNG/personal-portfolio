@@ -3,7 +3,6 @@
 }
 
 .featured {
-    height: 150px;
     position: relative;
     display: block;
     margin-bottom: .5rem;
@@ -25,13 +24,14 @@
 }
 
 .text {
-    position: absolute;
     display: flex;
     width: 100%;
-    height: 100%;
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    position: relative;
+    min-height: 150px;
 }
 
 .title {
@@ -55,10 +55,15 @@
         top: unset;
         bottom: 0;
         background-color: var(--clr-dark);
+        position: absolute;
+        min-height: unset;
     }
 
     .title {
         font-size: .9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .time {

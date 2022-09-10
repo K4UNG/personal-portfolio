@@ -60,7 +60,7 @@
     }
 
     .title {
-        font-size: 2.3rem;
+        font-size: 2rem;
         font-weight: 800;
     }
 
@@ -106,5 +106,11 @@
 
     .wrapper {
         padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1800px) {
+    .title {
+        font-size: 2.5rem;
     }
 }
