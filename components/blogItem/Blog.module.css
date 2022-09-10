@@ -40,7 +40,7 @@
 
 .body {
     padding: 1rem var(--padding);
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -53,6 +53,7 @@
 
 .content p {
     margin: .5rem 0 1rem;
+    line-height: 26px;
 }
 
 .content a {
@@ -65,7 +66,7 @@
 .content h4,
 .content h5,
 .content h6 {
-    margin-bottom: .5rem;
+    margin: 1rem 0 .5rem;
 }
 
 .content span {
@@ -107,7 +108,7 @@
 
 @media (min-width: 1700px) {
     .body {
-        max-width: 1400px;
+        max-width: 1100px;
     }
 
     .content img {
@@ -117,7 +118,7 @@
 
 @media (min-width: 1900px) {
     .body {
-        max-width: 1550px;
+        max-width: 1300px;
     }
 
     .body p {

@@ -62,7 +62,6 @@ export default function Project({ project }) {
             />
 
             <p>{text2}</p>
-            <p>{text3}</p>
 
             <Image
               src={`/images/${slug}/design.png`}
@@ -73,7 +72,7 @@ export default function Project({ project }) {
               objectFit="cover"
             />
 
-            <p>{text4}</p>
+            <p>{text3}</p>
           </div>
         </div>
       </div>

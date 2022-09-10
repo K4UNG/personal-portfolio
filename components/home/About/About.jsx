@@ -66,10 +66,10 @@ export default function About() {
           onMouseLeave={() => dispatch(animationActions.removeState())}
         >
           <Image
-            src="/images/person.jpg"
+            src="/images/person.png"
             alt="Kaung Zin Hein"
-            width="500"
-            height="900"
+            width="1400"
+            height="1000"
           />
         </div>
         <motion.div

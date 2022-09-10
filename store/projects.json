@@ -7,8 +7,7 @@
     "slug": "fem-gallery",
     "text1": "FEM Gallery is a project, made with React to showcase all of my completed challenges from frontendmentor.io. It currently has 25 projects.",
     "text2": "I got this idea from a random person I found on frontendmentor. I took a look at his completed challenges and they're all built in one big react app. That gave me the idea to build a seperate website where I put all my completed challenges, sort of like a gallery.",
-    "text3": "For the design, I tried something interesting by trying to use only two colors and it turned out better than I expected. I also tried adding different interesting layouts and it look a bit more unique.",
-    "text4": "The styling was a quite challenging, especially the hero section of the home page. I had to spend quite a bit of time trying to get it as close to the design while also making it responsive. I also experimented with some animations using the package framer-motion. For the data though, I just used a data.json file instead storing it somewhere and fetching it for a faster user experience.",
+    "text3": "For the design, I tried something interesting by trying to use only two colors and it turned out better than I expected. I also tried adding different interesting layouts to make it look a bit more unique.",
     "live": "https://fem-gallery.netlify.app",
     "repo": "https://github.com/K4UNG/fem-challenge-gallery"
   },
@@ -18,10 +17,9 @@
     "lang": "Django",
     "image": "banner.png",
     "slug": "khanner-blog",
-    "text1": "Khanner Blog is a blog site I made for one of my friends, using Django. It's also the first project I collabrated with someone, another friend of mine.",
-    "text2": "I was taking CS50 Web course at the time and one of the lectures was about Django. I watched another course on Django from YouTube to finish the asignment. It was more than enough just for a small project so I offered my friend a blog site and he said yes.",
-    "text3": "The design was nothing very special. It has featured posts accessible from both home and blogs page, latest posts section, all blogs page with pagination, categories section and login signup forms. I kept it all fairly simple.",
-    "text4": "My friend helped me style some of the pages while I work on the backend. It was one of my first projects where I use a backend so I was a new experience for me. I didn't know much about cloud storage and databases so I had some trouble trying to figure out how to store the data in production. I got it eventually and I learned a lot from this project.",
+    "text1": "Khanner Blog is a blog site I made for one of my friends, using Django. It's also the first project I collaborated with someone, another friend of mine.",
+    "text2": "I was taking CS50 Web course at the time and one of the lectures was about Django. I watched another course on Django from YouTube to finish the asignment. It was more than enough just for a small project so I offered my friend a blog site.",
+    "text3": "The design was very basic. It has featured posts accessible from both home and blogs page, latest posts section, all blogs page with pagination, categories section and login signup forms. I kept it all fairly simple.",
     "live": "https://khanner-blog.herokuapp.com",
     "repo": ""
   },
@@ -33,8 +31,7 @@
     "slug": "cooking-bud",
     "text1": "Cooking Bud is the ultimate cooking recipe hub for homecooks. It's built using React and Sponacular API.",
     "text2": "I randomly got an idea to build a recipe app so here it is. It has a feature where you can choose you ingredients and search for recipes with those ingredients. It also has recipe recomendations that refresh automatically twice a day.",
-    "text3": "I kept the design clean and simple. I has a hero section, section with different with different cuisines, recommended recipes, ingredient selection page, result page and of course, recipe detail page.",
-    "text4": "I was still new to React when I did this project so it was my perfect opportunity to practice what I've learned. I made the recommended recipes to fetch new recieps only once every 12 hours to not exceed the API daily usage. Overall, this was a great experience and now my mom can find all the recipes she wants using this.",
+    "text3": "I kept the design clean and simple. It has a hero section, section with different cuisines, recommended recipes, ingredient selection page, result page and of course, recipe detail page.",
     "live": "https://cookingbud.netlify.app",
     "repo": "https://github.com/K4UNG/CookingBud"
   },
@@ -44,10 +41,9 @@
     "lang": "React",
     "image": "banner.png",
     "slug": "scheduler-app",
-    "text1": "This is a scheduler app I built to help me schedule my daily studies easier.",
+    "text1": "This is a scheduler app I built to help me schedule my daily studies easily.",
     "text2": "I used to always draw a clock on a piece of paper and mark different hour portions with what I want to do for that time. So I thought why not make an app out of it and here it is.",
     "text3": "I kept the design super simple. The main focus of this project was making the clock functionable. There're two clocks representing the early half(1-12AM) and another half(1-12PM) each respectively. There're three different mode you can switch to - Inspect lets you inspect the task details, Select lets you select a task and assign it to a part of the clock, and finally Delete lets you delete the tasks on the clock, in the tasks list or even the whole schedule.",
-    "text4": "This project turned out a lot harder than I expected. The state management in this project was the most challenging one I've ever done. It also tremendously helped me to get used to Redux. Making the clock and all its 12 different parts functionable was also very challenging. If you're not sure how to use this scheduler, I recommend checking out the README in the github repository.",
     "live": "https://scheduler-k4ung.netlify.app",
     "repo": "https://github.com/K4UNG/Scheduler-app"
   }
