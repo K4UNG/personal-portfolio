@@ -64,7 +64,7 @@ export default function Blog({ blog }) {
                       src={url}
                       alt={title}
                       width="1200"
-                      height="500"
+                      height="600"
                       objectFit="cover"
                     />
                   );
