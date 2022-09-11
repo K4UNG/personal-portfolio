@@ -120,7 +120,7 @@ export default function About() {
               dispatch(animationActions.removeState());
               buttonRef.current?.classList.add(styles.out);
             }}
-            href="/images/keyboard.png"
+            href="/resume.pdf"
             alt="cv downloader"
             download
           >
