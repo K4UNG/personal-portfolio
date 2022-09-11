@@ -8,7 +8,7 @@
 }
 
 .project span {
-    background-color: black !important;
+    background-color: var(--clr-dark-50) !important;
 }
 
 .title {
