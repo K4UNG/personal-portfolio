@@ -138,6 +138,8 @@ export default function Skills() {
           width="1440"
           height="500"
           className={styles.image}
+          loading="eager"
+          priority={true}
         />
         <h2 className={styles.text}>Whatever technology needed</h2>
       </div>

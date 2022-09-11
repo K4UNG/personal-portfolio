@@ -70,6 +70,8 @@ export default function About() {
             alt="Kaung Zin Hein"
             width="1400"
             height="1000"
+            loading="eager"
+            priority={true}
           />
         </div>
         <motion.div
