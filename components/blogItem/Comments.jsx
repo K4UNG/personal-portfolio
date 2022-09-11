@@ -66,6 +66,7 @@ export default function Comments({ comments, id }) {
             id="name"
             type="text"
             placeholder="Name"
+            autoComplete="off"
           />
           <div
             style={{ height: name ? wrapper.current.clientHeight : 0 }}

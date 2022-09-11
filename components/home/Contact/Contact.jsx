@@ -109,6 +109,7 @@ export default function Contact() {
               id="name"
               type="text"
               name="name"
+              autoComplete="off"
             />
           </div>
           <div className={styles.control}>
@@ -119,6 +120,7 @@ export default function Contact() {
               id="email"
               type="email"
               name="email"
+              autoComplete="off"
             />
           </div>
           <div className={styles.control}>
