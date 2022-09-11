@@ -1,5 +1,6 @@
 import styles from "../styles/404.module.css";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function NotFoundPage() {
   const router = useRouter();
@@ -14,7 +15,9 @@ export default function NotFoundPage() {
         <button onClick={clickHandler} className={styles.home}>
           Go Back
         </button>
-        <img src="/images/bonk.png" alt="404 error" />
+        <div className={styles.image}>
+          <Image src="/images/bonk.png" alt="404 error" layout="fill" objectFit="cover" />
+        </div>
       </div>
     </div>
   );

@@ -20,3 +20,9 @@
     text-transform: uppercase;
     color: white;
 }
+
+.image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
