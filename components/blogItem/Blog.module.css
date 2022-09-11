@@ -77,10 +77,14 @@
 }
 
 .code {
-    font-weight: 600;
     background-color: var(--clr-dark-10);
     padding: 0 2px;
     border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.snippet span {
+    font-family: sans-serif;
 }
 
 @media (min-width: 680px) {

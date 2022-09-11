@@ -74,12 +74,14 @@ export default function Blog({ blog }) {
                 ),
                 code({ value }) {
                   return (
-                    <SyntaxHighlighter
-                      style={atomDark}
-                      language={value.language}
-                    >
-                      {value.code}
-                    </SyntaxHighlighter>
+                    <div className={styles.snippet}>
+                      <SyntaxHighlighter
+                        style={atomDark}
+                        language={value.language}
+                      >
+                        {value.code}
+                      </SyntaxHighlighter>
+                    </div>
                   );
                 },
               },
@@ -92,8 +94,8 @@ export default function Blog({ blog }) {
                   );
                 },
                 code({ text }) {
-                  return <span className={styles.code}>{text}</span>
-                }
+                  return <span className={styles.code}>{text}</span>;
+                },
               },
             }}
           />
