@@ -5,6 +5,7 @@ import { animationActions } from "../../../store/animationSlice";
 import Image from "next/image";
 import ArrowTopRight from "../../ui/ArrowTopRight";
 import emailjs from "@emailjs/browser";
+import Social from "./Social";
 
 export default function Contact() {
   const formRef = useRef();
@@ -93,6 +94,7 @@ export default function Contact() {
         <h2 className={styles.title}>
           Get in Touch <br />
           <ArrowTopRight />
+          <Social />
         </h2>
       </div>
       <div className={styles.form}>
