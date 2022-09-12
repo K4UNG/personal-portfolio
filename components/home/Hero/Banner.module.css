@@ -156,6 +156,14 @@
         display: inline-block;
     }
 
+    .list li a:hover {
+        font-weight: 700;
+    }
+
+    .list li:first-of-type a:hover {
+        font-weight: 800;
+    }
+
     .list li:first-child {
         font-weight: 700;
     }

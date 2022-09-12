@@ -87,6 +87,14 @@ export default function Banner() {
     dispatch(animationActions.removeState());
   }
 
+  function hideCursor() {
+    dispatch(animationActions.hideCursor())
+  }
+
+  function showCursor() {
+    dispatch(animationActions.removeState())
+  }
+
   return (
     <section id="home" className={styles.banner}>
       <div className={styles.banner__top}>
@@ -121,6 +129,8 @@ export default function Banner() {
                   href="#home"
                   alt="scroll to home"
                   tabIndex='1'
+                  onMouseEnter={hideCursor}
+                  onMouseLeave={showCursor}
                 >
                   Home
                 </motion.a>
@@ -131,6 +141,8 @@ export default function Banner() {
                   href="#portfolio"
                   alt="scroll to protfolio"
                   tabIndex='2'
+                  onMouseEnter={hideCursor}
+                  onMouseLeave={showCursor}
                 >
                   Portfolio
                 </motion.a>
@@ -141,6 +153,8 @@ export default function Banner() {
                   href="#about"
                   alt="scroll to about"
                   tabIndex='3'
+                  onMouseEnter={hideCursor}
+                  onMouseLeave={showCursor}
                 >
                   About
                 </motion.a>
@@ -151,6 +165,8 @@ export default function Banner() {
                   href="#contact"
                   alt="scroll to contact"
                   tabIndex='4'
+                  onMouseEnter={hideCursor}
+                  onMouseLeave={showCursor}
                 >
                   Contact
                 </motion.a>
