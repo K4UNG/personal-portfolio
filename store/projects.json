@@ -37,14 +37,14 @@
   },
   {
     "number": "04",
-    "title": "Scheduler App",
-    "lang": "React",
+    "title": "SSJYP Events",
+    "lang": "Nextjs",
     "image": "banner.png",
-    "slug": "scheduler-app",
-    "text1": "This is a scheduler app I built to help me schedule my daily studies easily.",
-    "text2": "I used to always draw a clock on a piece of paper and mark different hour portions with what I want to do for that time. So I thought why not make an app out of it and here it is.",
-    "text3": "I kept the design super simple. The main focus of this project was making the clock functionable. There're two clocks representing the early half(1-12AM) and another half(1-12PM) of the day respectively. There're three different modes you can switch to - Inspect lets you inspect the task details, Select lets you select a task and assign it to a part of the clock, and finally Delete lets you delete the tasks on the clock, in the tasks list or even the whole schedule.",
-    "live": "https://scheduler-k4ung.netlify.app",
-    "repo": "https://github.com/K4UNG/Scheduler-app"
+    "slug": "ssjyp-events",
+    "text1": "SSJYP is a schedule reminder for a rhythm game called, Superstart JYPNation. It displays the active events, bonus rewards and much more all in one place.",
+    "text2": "When I started learning programming with Python, I did a mini script version of this but it was full of bugs. But now that I have the knowledge to build a website, I figured it'd only be right to build an app for this.",
+    "text3": "For the design, I mostly kept it simple while keeping all the pages accessible. You can view the active events, song bonus rewards in the home page and other information about the game in different pages.",
+    "live": "https://ssjyp.vercel.app",
+    "repo": "https://github.com/K4UNG/ssjyp-events"
   }
 ]
